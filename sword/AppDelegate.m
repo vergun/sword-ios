@@ -7,15 +7,36 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    // Set the frame
+    CGRect viewRect = [[UIScreen mainScreen] bounds];
+    self.window = [[UIWindow alloc] initWithFrame:viewRect];
+    
+    // Make the view controller and set key and make visible
+//    UIViewController *viewController = [[UIViewController alloc] init];
+    self.viewController = [[ViewController alloc] init];
+    
+    // Make the view
+//    UIView *view = [[UIView alloc] initWithFrame:viewRect];
+//    view.backgroundColor = [UIColor yellowColor];
+//    self.viewController.view = view;
+    
+    
+    
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    // Log out
+    NSLog(@"Application did finish launching with options and is %f tall and %f wide",
+          viewRect.size.height,
+          viewRect.size.width);
+    
     return YES;
 }
 
