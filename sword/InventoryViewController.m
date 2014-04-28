@@ -1,24 +1,25 @@
 //
-//  ViewController.m
+//  InventoryViewController.m
 //  sword
 //
 //  Created by Verdi Ergun on 4/27/14.
 //  Copyright (c) 2014 Verdi Ergun. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "InventoryViewController.h"
 
-@interface ViewController ()
+@interface InventoryViewController ()
 
 @end
 
-@implementation ViewController
+@implementation InventoryViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = @"Inventory";
+        self.tabBarItem.image = [UIImage imageNamed:@"tabBarInventoryIcon"];
     }
     return self;
 }
@@ -26,10 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Set the views options
-    self.view.backgroundColor = [UIColor yellowColor];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,14 +36,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-  // Called the first time the view property is accessed
-- (void)loadView
-{
-    
-    CGRect viewRect = [[UIScreen mainScreen] bounds];
-    UIView *view = [[UIView alloc] initWithFrame:viewRect];
-    self.view = view;
-}
 /*
 #pragma mark - Navigation
 

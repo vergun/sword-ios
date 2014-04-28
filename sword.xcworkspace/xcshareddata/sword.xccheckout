@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>970A556E-7158-4623-A9EE-E5A6848293F3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>sword</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7E3B72CB-6426-4F13-B984-6753506131F9</key>
+		<string>ssh://github.com/vergun/sword.ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>sword.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7E3B72CB-6426-4F13-B984-6753506131F9</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/vergun/sword.ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7E3B72CB-6426-4F13-B984-6753506131F9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7E3B72CB-6426-4F13-B984-6753506131F9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sword</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -7,7 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "EnemiesViewController.h"
+#import "MapViewController.h"
+#import "StatsViewController.h"
+#import "InventoryViewController.h"
+
 
 @implementation AppDelegate
 
@@ -18,24 +22,24 @@
     CGRect viewRect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
     
-    // Make the view controller and set key and make visible
-//    UIViewController *viewController = [[UIViewController alloc] init];
-    self.viewController = [[ViewController alloc] init];
-    
-    // Make the view
-//    UIView *view = [[UIView alloc] initWithFrame:viewRect];
-//    view.backgroundColor = [UIColor yellowColor];
-//    self.viewController.view = view;
+    // Create View Controller
+    EnemiesViewController* enemiesVC = [[EnemiesViewController alloc] init];
+    MapViewController* mapVC = [[MapViewController alloc] init];
+    StatsViewController *statsVC = [[StatsViewController alloc] init];
+    InventoryViewController *inventoryVC = [[InventoryViewController alloc] init];
     
     
+
+    // Create TabBar Controller
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    NSArray *viewControllers = [NSArray arrayWithObjects: enemiesVC, mapVC, statsVC, inventoryVC, nil];
+    [tabBarController setViewControllers:viewControllers];
     
-    self.window.rootViewController = self.viewController;
+    // Set the RootVC and navController
+    self.window.rootViewController = tabBarController;
+    
+    // Make key adn visible
     [self.window makeKeyAndVisible];
-    
-    // Log out
-    NSLog(@"Application did finish launching with options and is %f tall and %f wide",
-          viewRect.size.height,
-          viewRect.size.width);
     
     return YES;
 }
