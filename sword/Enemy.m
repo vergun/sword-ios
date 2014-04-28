@@ -10,4 +10,21 @@
 
 @implementation Enemy
 
+- (id) init {
+    self = [self initWithName:@"defaultName" description:@"default Description"];
+    return self;
+}
+
+- (id) initWithName:(NSString *)aName
+        description:(NSString *)aDescription
+{
+    self = [super init];
+    if (self) {
+        self.name = aName;
+        self.description = aDescription;
+    }
+    return self;
+    
+}
+
 @end

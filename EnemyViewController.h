@@ -1,5 +1,5 @@
 //
-//  InventoryViewController.h
+//  EnemiesViewController.h
 //  sword
 //
 //  Created by Verdi Ergun on 4/27/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InventoryViewController : UIViewController
+@interface EnemyViewController : UIViewController
 
 @end

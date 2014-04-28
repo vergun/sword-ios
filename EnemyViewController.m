@@ -1,25 +1,25 @@
 //
-//  StatsViewController.m
+//  EnemiesViewController.m
 //  sword
 //
 //  Created by Verdi Ergun on 4/27/14.
 //  Copyright (c) 2014 Verdi Ergun. All rights reserved.
 //
 
-#import "StatsViewController.h"
+#import "EnemyViewController.h"
 
-@interface StatsViewController ()
+@interface EnemyViewController ()
 
 @end
 
-@implementation StatsViewController
+@implementation EnemyViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Stats";
-        self.tabBarItem.image = [UIImage imageNamed:@"tabBarFightIcon"];
+        self.title = @"Enemy";
+        self.tabBarItem.image = [UIImage imageNamed:@"tabBarEnemiesIcon"];
     }
     return self;
 }
@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor yellowColor];
 }
 
 - (void)didReceiveMemoryWarning

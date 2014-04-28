@@ -1,25 +1,25 @@
 //
-//  EnemiesViewController.m
+//  WorldViewController.m
 //  sword
 //
-//  Created by Verdi Ergun on 4/27/14.
+//  Created by Verdi Ergun on 4/28/14.
 //  Copyright (c) 2014 Verdi Ergun. All rights reserved.
 //
 
-#import "EnemiesViewController.h"
+#import "WorldViewController.h"
 
-@interface EnemiesViewController ()
+@interface WorldViewController ()
 
 @end
 
-@implementation EnemiesViewController
+@implementation WorldViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Enemies";
-        self.tabBarItem.image = [UIImage imageNamed:@"tabBarEnemiesIcon"];
+        self.title = @"World";
+        self.tabBarItem.image = [UIImage imageNamed:@"tabBarWorldIcon"];
     }
     return self;
 }
@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yellowColor];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

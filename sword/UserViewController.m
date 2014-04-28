@@ -1,25 +1,25 @@
 //
-//  InventoryViewController.m
+//  StatsViewController.m
 //  sword
 //
 //  Created by Verdi Ergun on 4/27/14.
 //  Copyright (c) 2014 Verdi Ergun. All rights reserved.
 //
 
-#import "InventoryViewController.h"
+#import "UserViewController.h"
 
-@interface InventoryViewController ()
+@interface UserViewController ()
 
 @end
 
-@implementation InventoryViewController
+@implementation UserViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Inventory";
-        self.tabBarItem.image = [UIImage imageNamed:@"tabBarInventoryIcon"];
+        self.title = @"User";
+        self.tabBarItem.image = [UIImage imageNamed:@"tabBarUserIcon"];
     }
     return self;
 }
@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

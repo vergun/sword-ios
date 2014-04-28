@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "EnemiesViewController.h"
+#import "EnemyViewController.h"
 #import "MapViewController.h"
-#import "StatsViewController.h"
-#import "InventoryViewController.h"
+#import "UserViewController.h"
+#import "WorldViewController.h"
+#import "InventoryTableViewController.h"
 
 
 @implementation AppDelegate
@@ -22,17 +23,23 @@
     CGRect viewRect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
     
-    // Create View Controller
-    EnemiesViewController* enemiesVC = [[EnemiesViewController alloc] init];
+    // Create VC and TableVC
+    EnemyViewController* enemyVC = [[EnemyViewController alloc] init];
     MapViewController* mapVC = [[MapViewController alloc] init];
-    StatsViewController *statsVC = [[StatsViewController alloc] init];
-    InventoryViewController *inventoryVC = [[InventoryViewController alloc] init];
+    UserViewController *userVC = [[UserViewController alloc] init];
+    InventoryTableViewController *inventoryTableViewController = [[InventoryTableViewController alloc] init];
+    WorldViewController *worldVC = [[WorldViewController alloc] init];
     
-    
+    // Create NC
+    UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:enemyVC];
+    UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
+    UINavigationController *userNavController = [[UINavigationController alloc] initWithRootViewController:userVC];
+    UINavigationController *inventoryNavController = [[UINavigationController alloc] initWithRootViewController:inventoryTableViewController];
+    UINavigationController *worldNavController = [[UINavigationController alloc] initWithRootViewController:worldVC];
 
     // Create TabBar Controller
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    NSArray *viewControllers = [NSArray arrayWithObjects: enemiesVC, mapVC, statsVC, inventoryVC, nil];
+    NSArray *viewControllers = [NSArray arrayWithObjects: enemyNavController, mapNavController, userNavController, inventoryNavController, worldNavController, nil];
     [tabBarController setViewControllers:viewControllers];
     
     // Set the RootVC and navController

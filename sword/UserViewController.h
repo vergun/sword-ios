@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StatsViewController : UIViewController
+@interface UserViewController : UIViewController
 
 @end

@@ -21,16 +21,17 @@
 		0DDB3321190D62230079F5AE /* swordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB3320190D62230079F5AE /* swordTests.m */; };
 		5F1CDB127A6444CBBE85CA41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0ED7A6D5184CA4A2460B1B /* libPods.a */; };
 		9EDA52B5190E1E0800212715 /* tabBarEnemiesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B0190E1E0800212715 /* tabBarEnemiesIcon.png */; };
-		9EDA52B6190E1E0800212715 /* tabBarFightIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B1190E1E0800212715 /* tabBarFightIcon.png */; };
+		9EDA52B6190E1E0800212715 /* tabBarUserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B1190E1E0800212715 /* tabBarUserIcon.png */; };
 		9EDA52B7190E1E0800212715 /* tabBarInventoryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B2190E1E0800212715 /* tabBarInventoryIcon.png */; };
-		9EDA52B8190E1E0800212715 /* tabBarStarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B3190E1E0800212715 /* tabBarStarIcon.png */; };
+		9EDA52B8190E1E0800212715 /* tabBarWorldIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B3190E1E0800212715 /* tabBarWorldIcon.png */; };
 		9EDA52B9190E1E0800212715 /* tabBarMapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B4190E1E0800212715 /* tabBarMapIcon.png */; };
-		9EDA52BE190E1ED400212715 /* EnemiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52BD190E1ED400212715 /* EnemiesViewController.m */; };
+		9EDA52BE190E1ED400212715 /* EnemyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52BD190E1ED400212715 /* EnemyViewController.m */; };
 		9EDA52C1190E1F9900212715 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52C0190E1F9900212715 /* MapViewController.m */; };
 		9EDA52C4190E286200212715 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52C3190E286200212715 /* User.m */; };
 		9EDA52C9190E28AB00212715 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52C8190E28AB00212715 /* Enemy.m */; };
-		9EDA52CC190E291A00212715 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52CB190E291A00212715 /* StatsViewController.m */; };
-		9EDA52CF190E293300212715 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52CE190E293300212715 /* InventoryViewController.m */; };
+		9EDA52CC190E291A00212715 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52CB190E291A00212715 /* UserViewController.m */; };
+		9EDA52D2190EC76A00212715 /* InventoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52D1190EC76A00212715 /* InventoryTableViewController.m */; };
+		9EDA52D5190EC93E00212715 /* WorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52D4190EC93E00212715 /* WorldViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,22 +63,24 @@
 		0DDB3320190D62230079F5AE /* swordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swordTests.m; sourceTree = "<group>"; };
 		1FA4669785C841868DF38504 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		9EDA52B0190E1E0800212715 /* tabBarEnemiesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarEnemiesIcon.png; sourceTree = "<group>"; };
-		9EDA52B1190E1E0800212715 /* tabBarFightIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarFightIcon.png; sourceTree = "<group>"; };
+		9EDA52B1190E1E0800212715 /* tabBarUserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarUserIcon.png; sourceTree = "<group>"; };
 		9EDA52B2190E1E0800212715 /* tabBarInventoryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarInventoryIcon.png; sourceTree = "<group>"; };
-		9EDA52B3190E1E0800212715 /* tabBarStarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarStarIcon.png; sourceTree = "<group>"; };
+		9EDA52B3190E1E0800212715 /* tabBarWorldIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarWorldIcon.png; sourceTree = "<group>"; };
 		9EDA52B4190E1E0800212715 /* tabBarMapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarMapIcon.png; sourceTree = "<group>"; };
-		9EDA52BC190E1ED400212715 /* EnemiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemiesViewController.h; path = ../EnemiesViewController.h; sourceTree = "<group>"; };
-		9EDA52BD190E1ED400212715 /* EnemiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemiesViewController.m; path = ../EnemiesViewController.m; sourceTree = "<group>"; };
+		9EDA52BC190E1ED400212715 /* EnemyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyViewController.h; path = ../EnemyViewController.h; sourceTree = "<group>"; };
+		9EDA52BD190E1ED400212715 /* EnemyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyViewController.m; path = ../EnemyViewController.m; sourceTree = "<group>"; };
 		9EDA52BF190E1F9900212715 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9EDA52C0190E1F9900212715 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		9EDA52C2190E286200212715 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		9EDA52C3190E286200212715 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
 		9EDA52C7190E28AB00212715 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
 		9EDA52C8190E28AB00212715 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
-		9EDA52CA190E291A00212715 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
-		9EDA52CB190E291A00212715 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
-		9EDA52CD190E293300212715 /* InventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
-		9EDA52CE190E293300212715 /* InventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryViewController.m; sourceTree = "<group>"; };
+		9EDA52CA190E291A00212715 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		9EDA52CB190E291A00212715 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		9EDA52D0190EC76A00212715 /* InventoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryTableViewController.h; sourceTree = "<group>"; };
+		9EDA52D1190EC76A00212715 /* InventoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryTableViewController.m; sourceTree = "<group>"; };
+		9EDA52D3190EC93E00212715 /* WorldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldViewController.h; sourceTree = "<group>"; };
+		9EDA52D4190EC93E00212715 /* WorldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldViewController.m; sourceTree = "<group>"; };
 		AE0ED7A6D5184CA4A2460B1B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -185,9 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				9EDA52B0190E1E0800212715 /* tabBarEnemiesIcon.png */,
-				9EDA52B1190E1E0800212715 /* tabBarFightIcon.png */,
+				9EDA52B1190E1E0800212715 /* tabBarUserIcon.png */,
 				9EDA52B2190E1E0800212715 /* tabBarInventoryIcon.png */,
-				9EDA52B3190E1E0800212715 /* tabBarStarIcon.png */,
+				9EDA52B3190E1E0800212715 /* tabBarWorldIcon.png */,
 				9EDA52B4190E1E0800212715 /* tabBarMapIcon.png */,
 			);
 			name = Images;
@@ -207,14 +210,16 @@
 		9EDA52C6190E287400212715 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9EDA52CA190E291A00212715 /* StatsViewController.h */,
-				9EDA52CB190E291A00212715 /* StatsViewController.m */,
-				9EDA52CD190E293300212715 /* InventoryViewController.h */,
-				9EDA52CE190E293300212715 /* InventoryViewController.m */,
+				9EDA52CA190E291A00212715 /* UserViewController.h */,
+				9EDA52CB190E291A00212715 /* UserViewController.m */,
 				9EDA52BF190E1F9900212715 /* MapViewController.h */,
 				9EDA52C0190E1F9900212715 /* MapViewController.m */,
-				9EDA52BC190E1ED400212715 /* EnemiesViewController.h */,
-				9EDA52BD190E1ED400212715 /* EnemiesViewController.m */,
+				9EDA52BC190E1ED400212715 /* EnemyViewController.h */,
+				9EDA52BD190E1ED400212715 /* EnemyViewController.m */,
+				9EDA52D0190EC76A00212715 /* InventoryTableViewController.h */,
+				9EDA52D1190EC76A00212715 /* InventoryTableViewController.m */,
+				9EDA52D3190EC93E00212715 /* WorldViewController.h */,
+				9EDA52D4190EC93E00212715 /* WorldViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -297,8 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDB3306190D62230079F5AE /* InfoPlist.strings in Resources */,
-				9EDA52B6190E1E0800212715 /* tabBarFightIcon.png in Resources */,
-				9EDA52B8190E1E0800212715 /* tabBarStarIcon.png in Resources */,
+				9EDA52B6190E1E0800212715 /* tabBarUserIcon.png in Resources */,
+				9EDA52B8190E1E0800212715 /* tabBarWorldIcon.png in Resources */,
 				9EDA52B9190E1E0800212715 /* tabBarMapIcon.png in Resources */,
 				0DDB330E190D62230079F5AE /* Images.xcassets in Resources */,
 				9EDA52B5190E1E0800212715 /* tabBarEnemiesIcon.png in Resources */,
@@ -355,13 +360,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EDA52C9190E28AB00212715 /* Enemy.m in Sources */,
-				9EDA52CF190E293300212715 /* InventoryViewController.m in Sources */,
 				0DDB330C190D62230079F5AE /* AppDelegate.m in Sources */,
-				9EDA52CC190E291A00212715 /* StatsViewController.m in Sources */,
+				9EDA52CC190E291A00212715 /* UserViewController.m in Sources */,
 				9EDA52C4190E286200212715 /* User.m in Sources */,
 				9EDA52C1190E1F9900212715 /* MapViewController.m in Sources */,
+				9EDA52D5190EC93E00212715 /* WorldViewController.m in Sources */,
 				0DDB3308190D62230079F5AE /* main.m in Sources */,
-				9EDA52BE190E1ED400212715 /* EnemiesViewController.m in Sources */,
+				9EDA52D2190EC76A00212715 /* InventoryTableViewController.m in Sources */,
+				9EDA52BE190E1ED400212715 /* EnemyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
