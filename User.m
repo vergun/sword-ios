@@ -23,64 +23,44 @@
         self = [super init];
         self.name = aName;
         self.description = aDescription;
+        [User saveUser:self];
     }
     return self;
     
 }
 
-- (void) dataRetrieved
++ (void) saveUser:(User *)aUser
 {
-    NSLog(@"Data Retrieved");
+  [NSKeyedArchiver archiveRootObject:aUser toFile:[User getPathToArchive]];
 }
 
-- (id) initWithJSON
++ (User *) getUser
+{
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:[User getPathToArchive]];
+}
+
++ (NSString *) getPathToArchive
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsDir = [paths objectAtIndex:0];
+    return [docsDir stringByAppendingPathComponent:@"user.model"];
+}
+
+- (User *) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];
-    
-    if (self) {
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"initWithJSONFinishedLoading" object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataRetrieved) name:@"initWithJSONFinishedLoading" object:nil];
-        
-        
-        
-        
-// AFNetworking Example
-//        // 0
-//        static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/weather_sample/";
-//
-//        
-//        // 1
-//        NSString *string = [NSString stringWithFormat:@"%@weather.php?format=json", BaseURLString];
-//        NSURL *url = [NSURL URLWithString:string];
-//        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//        
-//        // 2
-//        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-//        operation.responseSerializer = [AFJSONResponseSerializer serializer];
-//        
-//        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-//            
-//            // 3
-//            self.name = @"Hello";
-//            self.description = @"JSON Retrieved";
-//            
-//        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//            
-//            // 4
-//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Weather"
-//                                                                message:[error localizedDescription]
-//                                                               delegate:nil
-//                                                      cancelButtonTitle:@"Ok"
-//                                                      otherButtonTitles:nil];
-//            [alertView show];
-//        }];
-//        
-//        // 5
-//        [operation start];
-        
+    if (self)
+    {
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.description = [aDecoder decodeObjectForKey:@"description"];
     }
     return self;
+}
+
+- (void) encodeWithCoder:(NSCoder *)anEncoder
+{
+    [anEncoder encodeObject:self.name forKey:@"name"];
+    [anEncoder encodeObject:self.description forKey:@"description"];
     
 }
 

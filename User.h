@@ -13,6 +13,9 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *description;
 
-- (id) initWithJSON;
++ (NSString *) getPathToArchive;
++ (void) saveUser:(User *)aUser;
++ (User *) getUser;
+
 
 @end

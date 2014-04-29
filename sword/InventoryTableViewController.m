@@ -9,7 +9,7 @@
 #import "InventoryTableViewController.h"
 
 @interface InventoryTableViewController ()
-
+- (void) updateInventoryTableViewBadge:(int) badgeValue;
 @end
 
 @implementation InventoryTableViewController
@@ -20,6 +20,15 @@
     if (self) {
         self.title = @"Inventory";
         self.tabBarItem.image = [UIImage imageNamed:@"tabBarInventoryIcon"];
+        
+        UIBarButtonItem *organizeButton = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
+                                       target:self
+                                       action:@selector(organizeButtonPressed)];
+        self.navigationItem.rightBarButtonItem = organizeButton;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInventoryTableViewBadge:) name:@"updateInventoryTableViewBadge:badgeValue" object:nil];
+
     }
     return self;
 }
@@ -33,6 +42,24 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+
+
+}
+
+- (void) updateInventoryTableViewBadge:(int) badgeValue
+{
+    NSLog(@"%@", [self.tabBarController.tabBar.items[4] title]);
+    [self.tabBarController.tabBar.items[1] setBadgeValue:[NSString stringWithFormat:@"%i", badgeValue]];
+    
+}
+
+- (void) organizeButtonPressed
+{
+    NSLog(@"Organize button pressed");
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,14 +72,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+    // Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+    // Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
 }

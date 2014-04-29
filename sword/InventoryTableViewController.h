@@ -10,4 +10,6 @@
 
 @interface InventoryTableViewController : UITableViewController
 
+@property(nonatomic, copy)NSString* badgeValue;
+
 @end

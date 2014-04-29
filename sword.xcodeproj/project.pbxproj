@@ -20,6 +20,9 @@
 		0DDB331F190D62230079F5AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DDB331D190D62230079F5AE /* InfoPlist.strings */; };
 		0DDB3321190D62230079F5AE /* swordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB3320190D62230079F5AE /* swordTests.m */; };
 		5F1CDB127A6444CBBE85CA41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0ED7A6D5184CA4A2460B1B /* libPods.a */; };
+		9E0FBAE21910502D00865E37 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0FBAE11910502D00865E37 /* TutorialViewController.m */; };
+		9E0FBAE61910503B00865E37 /* TutorialChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0FBAE41910503B00865E37 /* TutorialChildViewController.m */; };
+		9E0FBAE71910503B00865E37 /* TutorialChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0FBAE51910503B00865E37 /* TutorialChildViewController.xib */; };
 		9EDA52B5190E1E0800212715 /* tabBarEnemiesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B0190E1E0800212715 /* tabBarEnemiesIcon.png */; };
 		9EDA52B6190E1E0800212715 /* tabBarUserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B1190E1E0800212715 /* tabBarUserIcon.png */; };
 		9EDA52B7190E1E0800212715 /* tabBarInventoryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B2190E1E0800212715 /* tabBarInventoryIcon.png */; };
@@ -62,6 +65,11 @@
 		0DDB331E190D62230079F5AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0DDB3320190D62230079F5AE /* swordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swordTests.m; sourceTree = "<group>"; };
 		1FA4669785C841868DF38504 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		9E0FBAE01910502D00865E37 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		9E0FBAE11910502D00865E37 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+		9E0FBAE31910503B00865E37 /* TutorialChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialChildViewController.h; sourceTree = "<group>"; };
+		9E0FBAE41910503B00865E37 /* TutorialChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialChildViewController.m; sourceTree = "<group>"; };
+		9E0FBAE51910503B00865E37 /* TutorialChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialChildViewController.xib; sourceTree = "<group>"; };
 		9EDA52B0190E1E0800212715 /* tabBarEnemiesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarEnemiesIcon.png; sourceTree = "<group>"; };
 		9EDA52B1190E1E0800212715 /* tabBarUserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarUserIcon.png; sourceTree = "<group>"; };
 		9EDA52B2190E1E0800212715 /* tabBarInventoryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarInventoryIcon.png; sourceTree = "<group>"; };
@@ -220,6 +228,11 @@
 				9EDA52D1190EC76A00212715 /* InventoryTableViewController.m */,
 				9EDA52D3190EC93E00212715 /* WorldViewController.h */,
 				9EDA52D4190EC93E00212715 /* WorldViewController.m */,
+				9E0FBAE01910502D00865E37 /* TutorialViewController.h */,
+				9E0FBAE11910502D00865E37 /* TutorialViewController.m */,
+				9E0FBAE31910503B00865E37 /* TutorialChildViewController.h */,
+				9E0FBAE41910503B00865E37 /* TutorialChildViewController.m */,
+				9E0FBAE51910503B00865E37 /* TutorialChildViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -308,6 +321,7 @@
 				0DDB330E190D62230079F5AE /* Images.xcassets in Resources */,
 				9EDA52B5190E1E0800212715 /* tabBarEnemiesIcon.png in Resources */,
 				9EDA52B7190E1E0800212715 /* tabBarInventoryIcon.png in Resources */,
+				9E0FBAE71910503B00865E37 /* TutorialChildViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +377,8 @@
 				0DDB330C190D62230079F5AE /* AppDelegate.m in Sources */,
 				9EDA52CC190E291A00212715 /* UserViewController.m in Sources */,
 				9EDA52C4190E286200212715 /* User.m in Sources */,
+				9E0FBAE61910503B00865E37 /* TutorialChildViewController.m in Sources */,
+				9E0FBAE21910502D00865E37 /* TutorialViewController.m in Sources */,
 				9EDA52C1190E1F9900212715 /* MapViewController.m in Sources */,
 				9EDA52D5190EC93E00212715 /* WorldViewController.m in Sources */,
 				0DDB3308190D62230079F5AE /* main.m in Sources */,

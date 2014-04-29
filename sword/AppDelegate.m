@@ -12,42 +12,45 @@
 #import "UserViewController.h"
 #import "WorldViewController.h"
 #import "InventoryTableViewController.h"
-
+#import "TutorialViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    // Set the frame
+    //Screen Setup
     CGRect viewRect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
     
-    // Create VC and TableVC
+    //Tutorial Setup
+    TutorialViewController *tutorialViewController = [[TutorialViewController alloc] init];
+    //self.window.rootViewController = tutorialViewController;
+    
+    //ViewControllers
     EnemyViewController* enemyVC = [[EnemyViewController alloc] init];
     MapViewController* mapVC = [[MapViewController alloc] init];
     UserViewController *userVC = [[UserViewController alloc] init];
     InventoryTableViewController *inventoryTableViewController = [[InventoryTableViewController alloc] init];
     WorldViewController *worldVC = [[WorldViewController alloc] init];
     
-    // Create NC
+    //NavigationControllers
     UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:enemyVC];
     UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
     UINavigationController *userNavController = [[UINavigationController alloc] initWithRootViewController:userVC];
     UINavigationController *inventoryNavController = [[UINavigationController alloc] initWithRootViewController:inventoryTableViewController];
     UINavigationController *worldNavController = [[UINavigationController alloc] initWithRootViewController:worldVC];
 
-    // Create TabBar Controller
+    //TabBarController
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     NSArray *viewControllers = [NSArray arrayWithObjects: enemyNavController, mapNavController, userNavController, inventoryNavController, worldNavController, nil];
     [tabBarController setViewControllers:viewControllers];
     
-    // Set the RootVC and navController
+    //RootViewController
     self.window.rootViewController = tabBarController;
     
-    // Make key adn visible
+    // Make key and visible
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

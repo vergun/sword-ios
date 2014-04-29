@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Map";
-        self.tabBarItem.image = [UIImage imageNamed:@"tabBarStatsIcon"];
+        self.tabBarItem.image = [UIImage imageNamed:@"tabBarMapIcon"];
     }
     return self;
 }

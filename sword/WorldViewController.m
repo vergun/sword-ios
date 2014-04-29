@@ -20,8 +20,29 @@
     if (self) {
         self.title = @"World";
         self.tabBarItem.image = [UIImage imageNamed:@"tabBarWorldIcon"];
+        UIBarButtonItem *exploreButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                      target:self
+                                      action:@selector(exploreButtonPressed)];
+        UIBarButtonItem *testButton = [[UIBarButtonItem alloc]
+                                          initWithBarButtonSystemItem:UIBarButtonSystemItemPlay
+                                          target:self
+                                          action:@selector(testButtonPressed)];
+        NSArray *navigationButtonsArray = [NSArray arrayWithObjects:exploreButton, testButton, nil];
+        self.navigationItem.rightBarButtonItems = navigationButtonsArray;
+
     }
     return self;
+}
+
+- (void)exploreButtonPressed
+{
+    NSLog(@"Explore button pressed");
+}
+
+- (void)testButtonPressed
+{
+    NSLog(@"Test button pressed");
 }
 
 - (void)viewDidLoad

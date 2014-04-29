@@ -7,6 +7,7 @@
 //
 
 #import "UserViewController.h"
+#import "User.h"
 
 @interface UserViewController ()
 
@@ -27,7 +28,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // enteringBackground
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+        selector:@selector(enteringBackground)
+            name:UIApplicationDidEnterBackgroundNotification
+            object:nil];
+    
+    // enteringForeground
+    [[NSNotificationCenter defaultCenter]
+        addObserver:self
+           selector:@selector(enteringForeground)
+               name:UIApplicationWillEnterForegroundNotification
+             object:nil];
+}
+
+- (void)enteringBackground
+{
+    [User saveUser:self.user];
+}
+
+- (void)enteringForeground
+{
+    self.user = [User getUser];
 }
 
 - (void)didReceiveMemoryWarning
