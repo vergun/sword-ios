@@ -35,6 +35,9 @@
 		9EDA52CC190E291A00212715 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52CB190E291A00212715 /* UserViewController.m */; };
 		9EDA52D2190EC76A00212715 /* InventoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52D1190EC76A00212715 /* InventoryTableViewController.m */; };
 		9EDA52D5190EC93E00212715 /* WorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52D4190EC93E00212715 /* WorldViewController.m */; };
+		9EDE5E2019111176002A3D93 /* QuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE5E1E19111176002A3D93 /* QuestViewController.m */; };
+		9EDE5E2119111176002A3D93 /* QuestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDE5E1F19111176002A3D93 /* QuestViewController.xib */; };
+		9EDE5E241911136F002A3D93 /* Quest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE5E231911136F002A3D93 /* Quest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,11 @@
 		9EDA52D1190EC76A00212715 /* InventoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryTableViewController.m; sourceTree = "<group>"; };
 		9EDA52D3190EC93E00212715 /* WorldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldViewController.h; sourceTree = "<group>"; };
 		9EDA52D4190EC93E00212715 /* WorldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldViewController.m; sourceTree = "<group>"; };
+		9EDE5E1D19111176002A3D93 /* QuestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestViewController.h; sourceTree = "<group>"; };
+		9EDE5E1E19111176002A3D93 /* QuestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestViewController.m; sourceTree = "<group>"; };
+		9EDE5E1F19111176002A3D93 /* QuestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestViewController.xib; sourceTree = "<group>"; };
+		9EDE5E221911136F002A3D93 /* Quest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quest.h; sourceTree = "<group>"; };
+		9EDE5E231911136F002A3D93 /* Quest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quest.m; sourceTree = "<group>"; };
 		AE0ED7A6D5184CA4A2460B1B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -211,6 +219,8 @@
 				9EDA52C3190E286200212715 /* User.m */,
 				9EDA52C7190E28AB00212715 /* Enemy.h */,
 				9EDA52C8190E28AB00212715 /* Enemy.m */,
+				9EDE5E221911136F002A3D93 /* Quest.h */,
+				9EDE5E231911136F002A3D93 /* Quest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -232,6 +242,9 @@
 				9E0FBAE11910502D00865E37 /* TutorialViewController.m */,
 				9E0FBAE31910503B00865E37 /* TutorialChildViewController.h */,
 				9E0FBAE41910503B00865E37 /* TutorialChildViewController.m */,
+				9EDE5E1D19111176002A3D93 /* QuestViewController.h */,
+				9EDE5E1E19111176002A3D93 /* QuestViewController.m */,
+				9EDE5E1F19111176002A3D93 /* QuestViewController.xib */,
 				9E0FBAE51910503B00865E37 /* TutorialChildViewController.xib */,
 			);
 			name = Controllers;
@@ -317,6 +330,7 @@
 				0DDB3306190D62230079F5AE /* InfoPlist.strings in Resources */,
 				9EDA52B6190E1E0800212715 /* tabBarUserIcon.png in Resources */,
 				9EDA52B8190E1E0800212715 /* tabBarWorldIcon.png in Resources */,
+				9EDE5E2119111176002A3D93 /* QuestViewController.xib in Resources */,
 				9EDA52B9190E1E0800212715 /* tabBarMapIcon.png in Resources */,
 				0DDB330E190D62230079F5AE /* Images.xcassets in Resources */,
 				9EDA52B5190E1E0800212715 /* tabBarEnemiesIcon.png in Resources */,
@@ -373,11 +387,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EDE5E241911136F002A3D93 /* Quest.m in Sources */,
 				9EDA52C9190E28AB00212715 /* Enemy.m in Sources */,
 				0DDB330C190D62230079F5AE /* AppDelegate.m in Sources */,
 				9EDA52CC190E291A00212715 /* UserViewController.m in Sources */,
 				9EDA52C4190E286200212715 /* User.m in Sources */,
 				9E0FBAE61910503B00865E37 /* TutorialChildViewController.m in Sources */,
+				9EDE5E2019111176002A3D93 /* QuestViewController.m in Sources */,
 				9E0FBAE21910502D00865E37 /* TutorialViewController.m in Sources */,
 				9EDA52C1190E1F9900212715 /* MapViewController.m in Sources */,
 				9EDA52D5190EC93E00212715 /* WorldViewController.m in Sources */,

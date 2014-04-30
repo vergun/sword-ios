@@ -7,12 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "EnemyViewController.h"
-#import "MapViewController.h"
-#import "UserViewController.h"
-#import "WorldViewController.h"
-#import "InventoryTableViewController.h"
 #import "TutorialViewController.h"
+#import "QuestViewController.h"
 #import "User.h"
 
 @implementation AppDelegate
@@ -25,46 +21,30 @@
     
     NSLog(@"%@ %@", user.tutorial, user.description);
     
-    if ([user.tutorial isEqualToString:@"YES"]) { [self normalPath]; }
-    else if ([user.tutorial isEqualToString:@"NO"]) { [self tutorialPath]; }
-    else { [self normalPath]; }
+    if (![user sawTutorial:user]) { [self tutorialPath]; }
+    else { [self chooseQuestPath]; }
     
     return YES;
 }
 
-- (void)normalPath
+- (void)chooseQuestPath
 {
     //Screen Setup
     CGRect viewRect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
     
-    //ViewControllers
-    EnemyViewController* enemyVC = [[EnemyViewController alloc] init];
-    MapViewController* mapVC = [[MapViewController alloc] init];
-    UserViewController *userVC = [[UserViewController alloc] init];
-    InventoryTableViewController *inventoryTableViewController = [[InventoryTableViewController alloc] init];
-    WorldViewController *worldVC = [[WorldViewController alloc] init];
-    
-    //NavigationControllers
-    UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:enemyVC];
-    UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
-    UINavigationController *userNavController = [[UINavigationController alloc] initWithRootViewController:userVC];
-    UINavigationController *inventoryNavController = [[UINavigationController alloc] initWithRootViewController:inventoryTableViewController];
-    UINavigationController *worldNavController = [[UINavigationController alloc] initWithRootViewController:worldVC];
-    
-    //TabBarController
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    NSArray *viewControllers = [NSArray arrayWithObjects: enemyNavController, mapNavController, userNavController, inventoryNavController, worldNavController, nil];
-    [tabBarController setViewControllers:viewControllers];
+    // Quest
+    QuestViewController *questVC = [[QuestViewController alloc]init];
     
     //RootViewController
-    self.window.rootViewController = tabBarController;
+    self.window.rootViewController = questVC;
     
     // Make key and visible
     [self.window makeKeyAndVisible];
+    
 }
 
-- (void) tutorialPath
+- (void)tutorialPath
 {
     
     //Screen Setup

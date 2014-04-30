@@ -54,6 +54,11 @@
     [User saveUser:aUser];
 }
 
+- (BOOL) sawTutorial:(User*)aUser
+{
+    return [aUser.tutorial isEqualToString:@"YES"] ? YES : NO;
+}
+
 - (User *) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];

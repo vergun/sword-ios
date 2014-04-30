@@ -20,6 +20,7 @@
 
 
 + (void) skipTutorial:(User*)aUser;
+- (BOOL) sawTutorial:(User*)aUser;
 
 
 

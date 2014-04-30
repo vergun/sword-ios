@@ -7,6 +7,7 @@
 //
 
 #import "TutorialChildViewController.h"
+#import "QuestViewController.h"
 #import "User.h"
 
 @interface TutorialChildViewController ()
@@ -73,9 +74,10 @@
 
 - (void)endTutorial
 {
-    NSLog(@"endTutorial");
     User *user = [User getUser];
     [User skipTutorial:user];
+    QuestViewController *viewController = [[QuestViewController alloc] init];
+    [self presentViewController:viewController animated:YES completion:nil];
 }
 
 
