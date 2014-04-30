@@ -12,19 +12,19 @@
 @implementation User
 
 - (id) init {
-    self = [self initWithName:@"defaultName" description:@"defaultDescription"];
+    self = [self initWithName:@"defaultName" description:@"defaultDescription" tutorial:@"NO"];
     return self;
 }
 
 - (id) initWithName:(NSString *)aName
         description:(NSString *)aDescription
+        tutorial:(NSString *)aTutorial
 {
     if (self) {
         self = [super init];
         self.name = aName;
         self.description = aDescription;
-        self.sawTutorial = NO;
-        [self listen];
+        self.tutorial = aTutorial;
         [User saveUser:self];
     }
     return self;
@@ -48,14 +48,10 @@
     return [docsDir stringByAppendingPathComponent:@"user.model"];
 }
 
-- (void) listen
++ (void) skipTutorial:(User*)aUser
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEndTutorial) name:@"user:sawTutorial" object:nil];
-}
-
-- (void) didEndTutorial
-{
-
+    aUser.tutorial = @"YES";
+    [User saveUser:aUser];
 }
 
 - (User *) initWithCoder:(NSCoder *)aDecoder
@@ -65,6 +61,7 @@
     {
         self.name = [aDecoder decodeObjectForKey:@"name"];
         self.description = [aDecoder decodeObjectForKey:@"description"];
+        self.tutorial = [aDecoder decodeObjectForKey:@"tutorial"];
     }
     return self;
 }
@@ -73,7 +70,7 @@
 {
     [anEncoder encodeObject:self.name forKey:@"name"];
     [anEncoder encodeObject:self.description forKey:@"description"];
-    
+    [anEncoder encodeObject:self.tutorial forKey:@"tutorial"];
 }
 
 @end

@@ -21,12 +21,13 @@
 {
     User *user = [User getUser];
     
-    if (!user) {
-        User *user = [[User alloc] init];
-    }
+    if (!user) { user = [[User alloc] init]; }
     
-    if (user.sawTutorial) { [self normalPath]; }
-    if (!user.sawTutorial) { [self tutorialPath]; }
+    NSLog(@"%@ %@", user.tutorial, user.description);
+    
+    if ([user.tutorial isEqualToString:@"YES"]) { [self normalPath]; }
+    else if ([user.tutorial isEqualToString:@"NO"]) { [self tutorialPath]; }
+    else { [self normalPath]; }
     
     return YES;
 }

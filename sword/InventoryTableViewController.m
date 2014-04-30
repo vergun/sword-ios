@@ -50,16 +50,12 @@
 
 - (void) updateInventoryTableViewBadge:(int) badgeValue
 {
-    NSLog(@"%@", [self.tabBarController.tabBar.items[4] title]);
     [self.tabBarController.tabBar.items[1] setBadgeValue:[NSString stringWithFormat:@"%i", badgeValue]];
     
 }
 
 - (void) organizeButtonPressed
 {
-    NSLog(@"Organize button pressed");
-
-
 }
 
 - (void)didReceiveMemoryWarning

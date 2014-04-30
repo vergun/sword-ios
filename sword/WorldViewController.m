@@ -37,12 +37,10 @@
 
 - (void)exploreButtonPressed
 {
-    NSLog(@"Explore button pressed");
 }
 
 - (void)testButtonPressed
 {
-    NSLog(@"Test button pressed");
 }
 
 - (void)viewDidLoad

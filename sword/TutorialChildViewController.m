@@ -39,9 +39,7 @@
     self.screenNumberLabel.textColor = [UIColor whiteColor];
     self.screenNumberLabel.font = [UIFont fontWithName:@"Helvetica-Light" size:25];
     [self.view addSubview:self.screenNumberLabel];
-    
-    // Other form elements should be added here
-    
+        
     // setUserSawTutorialButton
     int endTutorialButtonWidth = screenWidth/2;
     int endTutorialButtonHeight = screenHeight*4/5;
@@ -75,8 +73,9 @@
 
 - (void)endTutorial
 {
-    NSLog(@"@got here");
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"user:sawTutorial" object:nil];
+    NSLog(@"endTutorial");
+    User *user = [User getUser];
+    [User skipTutorial:user];
 }
 
 
