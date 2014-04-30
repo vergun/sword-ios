@@ -12,6 +12,7 @@
 #import "UserViewController.h"
 #import "WorldViewController.h"
 #import "InventoryTableViewController.h"
+#import "QuestSetupViewController.h"
 
 @interface QuestViewController ()
 @end
@@ -44,18 +45,26 @@
 //    if(sender.textLabel){}
     
 }
+
+// if quest exists display setupvc otherwise display normal path
 - (IBAction)tappedFirstSlotButton:(id)sender {
-    [self normalPath];
+    [self setupPath];
 }
 - (IBAction)tappedSecondSlotButton:(id)sender {
-    [self normalPath];
+    [self setupPath];
 }
 - (IBAction)tappedThirdSlotButton:(id)sender {
-    [self normalPath];
+    [self setupPath];
 }
 
 
-- (void)normalPath
+- (void)setupPath
+{
+    QuestSetupViewController *questSetupVC = [[QuestSetupViewController alloc] init];
+    [self presentViewController:questSetupVC animated:YES completion:nil];
+}
+                                    
+-(void)normalPath
 {
     //ViewControllers
     EnemyViewController* enemyVC = [[EnemyViewController alloc] init];
@@ -63,7 +72,7 @@
     UserViewController *userVC = [[UserViewController alloc] init];
     InventoryTableViewController *inventoryTableViewController = [[InventoryTableViewController alloc] init];
     WorldViewController *worldVC = [[WorldViewController alloc] init];
-    
+
     //NavigationControllers
     UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:enemyVC];
     UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];

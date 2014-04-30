@@ -38,6 +38,8 @@
 		9EDE5E2019111176002A3D93 /* QuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE5E1E19111176002A3D93 /* QuestViewController.m */; };
 		9EDE5E2119111176002A3D93 /* QuestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDE5E1F19111176002A3D93 /* QuestViewController.xib */; };
 		9EDE5E241911136F002A3D93 /* Quest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE5E231911136F002A3D93 /* Quest.m */; };
+		9EDE5E2819116E20002A3D93 /* QuestSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE5E2619116E20002A3D93 /* QuestSetupViewController.m */; };
+		9EDE5E2919116E20002A3D93 /* QuestSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDE5E2719116E20002A3D93 /* QuestSetupViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,9 @@
 		9EDE5E1F19111176002A3D93 /* QuestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestViewController.xib; sourceTree = "<group>"; };
 		9EDE5E221911136F002A3D93 /* Quest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quest.h; sourceTree = "<group>"; };
 		9EDE5E231911136F002A3D93 /* Quest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quest.m; sourceTree = "<group>"; };
+		9EDE5E2519116E20002A3D93 /* QuestSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestSetupViewController.h; sourceTree = "<group>"; };
+		9EDE5E2619116E20002A3D93 /* QuestSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestSetupViewController.m; sourceTree = "<group>"; };
+		9EDE5E2719116E20002A3D93 /* QuestSetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestSetupViewController.xib; sourceTree = "<group>"; };
 		AE0ED7A6D5184CA4A2460B1B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -246,6 +251,9 @@
 				9EDE5E1E19111176002A3D93 /* QuestViewController.m */,
 				9EDE5E1F19111176002A3D93 /* QuestViewController.xib */,
 				9E0FBAE51910503B00865E37 /* TutorialChildViewController.xib */,
+				9EDE5E2519116E20002A3D93 /* QuestSetupViewController.h */,
+				9EDE5E2619116E20002A3D93 /* QuestSetupViewController.m */,
+				9EDE5E2719116E20002A3D93 /* QuestSetupViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -333,6 +341,7 @@
 				9EDE5E2119111176002A3D93 /* QuestViewController.xib in Resources */,
 				9EDA52B9190E1E0800212715 /* tabBarMapIcon.png in Resources */,
 				0DDB330E190D62230079F5AE /* Images.xcassets in Resources */,
+				9EDE5E2919116E20002A3D93 /* QuestSetupViewController.xib in Resources */,
 				9EDA52B5190E1E0800212715 /* tabBarEnemiesIcon.png in Resources */,
 				9EDA52B7190E1E0800212715 /* tabBarInventoryIcon.png in Resources */,
 				9E0FBAE71910503B00865E37 /* TutorialChildViewController.xib in Resources */,
@@ -389,6 +398,7 @@
 			files = (
 				9EDE5E241911136F002A3D93 /* Quest.m in Sources */,
 				9EDA52C9190E28AB00212715 /* Enemy.m in Sources */,
+				9EDE5E2819116E20002A3D93 /* QuestSetupViewController.m in Sources */,
 				0DDB330C190D62230079F5AE /* AppDelegate.m in Sources */,
 				9EDA52CC190E291A00212715 /* UserViewController.m in Sources */,
 				9EDA52C4190E286200212715 /* User.m in Sources */,
