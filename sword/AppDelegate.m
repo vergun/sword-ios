@@ -13,19 +13,29 @@
 #import "WorldViewController.h"
 #import "InventoryTableViewController.h"
 #import "TutorialViewController.h"
+#import "User.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    User *user = [User getUser];
     
+    if (!user) {
+        User *user = [[User alloc] init];
+    }
+    
+    if (user.sawTutorial) { [self normalPath]; }
+    if (!user.sawTutorial) { [self tutorialPath]; }
+    
+    return YES;
+}
+
+- (void)normalPath
+{
     //Screen Setup
     CGRect viewRect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
-    
-    //Tutorial Setup
-    TutorialViewController *tutorialViewController = [[TutorialViewController alloc] init];
-    //self.window.rootViewController = tutorialViewController;
     
     //ViewControllers
     EnemyViewController* enemyVC = [[EnemyViewController alloc] init];
@@ -40,7 +50,7 @@
     UINavigationController *userNavController = [[UINavigationController alloc] initWithRootViewController:userVC];
     UINavigationController *inventoryNavController = [[UINavigationController alloc] initWithRootViewController:inventoryTableViewController];
     UINavigationController *worldNavController = [[UINavigationController alloc] initWithRootViewController:worldVC];
-
+    
     //TabBarController
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     NSArray *viewControllers = [NSArray arrayWithObjects: enemyNavController, mapNavController, userNavController, inventoryNavController, worldNavController, nil];
@@ -51,7 +61,20 @@
     
     // Make key and visible
     [self.window makeKeyAndVisible];
-    return YES;
+}
+
+- (void) tutorialPath
+{
+    
+    //Screen Setup
+    CGRect viewRect = [[UIScreen mainScreen] bounds];
+    self.window = [[UIWindow alloc] initWithFrame:viewRect];
+    
+    TutorialViewController *tutorialViewController = [[TutorialViewController alloc] init];
+    self.window.rootViewController = tutorialViewController;
+    
+    // Make key and visible
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

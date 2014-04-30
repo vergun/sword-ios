@@ -7,6 +7,7 @@
 //
 
 #import "TutorialChildViewController.h"
+#import "User.h"
 
 @interface TutorialChildViewController ()
 
@@ -30,7 +31,8 @@
     // screen dimensions
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
-    
+    CGFloat screenHeight = screenRect.size.height;
+
     // pageLabel
     self.screenNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,120,screenWidth,100)];
     self.screenNumberLabel.textAlignment = NSTextAlignmentCenter;
@@ -39,6 +41,18 @@
     [self.view addSubview:self.screenNumberLabel];
     
     // Other form elements should be added here
+    
+    // setUserSawTutorialButton
+    int endTutorialButtonWidth = screenWidth/2;
+    int endTutorialButtonHeight = screenHeight*4/5;
+    self.endTutorialButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.view addSubview:self.endTutorialButton];
+    [self.endTutorialButton setTitle:@"Skip" forState:UIControlStateNormal];
+    [self.endTutorialButton setContentEdgeInsets:UIEdgeInsetsMake(2, 6, 2, 6)];
+    [self.endTutorialButton sizeToFit];
+    self.endTutorialButton.center = CGPointMake(endTutorialButtonWidth, endTutorialButtonHeight);
+    [self.endTutorialButton addTarget:self action:@selector(endTutorial) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -57,6 +71,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)endTutorial
+{
+    NSLog(@"@got here");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"user:sawTutorial" object:nil];
 }
 
 

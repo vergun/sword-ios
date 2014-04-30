@@ -11,6 +11,7 @@
 @interface TutorialChildViewController : UIViewController
 
 @property (strong, nonatomic) UILabel *screenNumberLabel;
+@property (strong, nonatomic) UIButton *endTutorialButton;
 @property (assign, nonatomic) NSInteger index;
 
 @end

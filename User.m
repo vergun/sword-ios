@@ -23,6 +23,8 @@
         self = [super init];
         self.name = aName;
         self.description = aDescription;
+        self.sawTutorial = NO;
+        [self listen];
         [User saveUser:self];
     }
     return self;
@@ -44,6 +46,16 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docsDir = [paths objectAtIndex:0];
     return [docsDir stringByAppendingPathComponent:@"user.model"];
+}
+
+- (void) listen
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEndTutorial) name:@"user:sawTutorial" object:nil];
+}
+
+- (void) didEndTutorial
+{
+
 }
 
 - (User *) initWithCoder:(NSCoder *)aDecoder

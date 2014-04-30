@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *description;
+@property (assign) BOOL sawTutorial;
 
 + (NSString *) getPathToArchive;
 + (void) saveUser:(User *)aUser;
