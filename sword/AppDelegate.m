@@ -18,9 +18,7 @@
     User *user = [User getUser];
     
     if (!user) { user = [[User alloc] init]; }
-    
-    NSLog(@"%@ %@", user.tutorial, user.description);
-    
+        
     if (![user sawTutorial:user]) { [self tutorialPath]; }
     else { [self chooseQuestPath]; }
     

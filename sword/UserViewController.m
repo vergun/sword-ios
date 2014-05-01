@@ -28,8 +28,22 @@
                                        target:self
                                        action:@selector(editButtonTapped)];
         self.navigationItem.rightBarButtonItem = editButton;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadView:) name:@"user:didEditName" object:nil];
     }
     return self;
+}
+
+- (void) reloadView:(NSNotification *) notification
+{
+    self.user = [User getUser];
+    self.nameLabel.text = self.user.name;
+    self.levelAndClassLabel.text = [NSString stringWithFormat:@"Level %d %@",self.user.level,self.user.characterClass];
+    self.experienceAndExperienceToNextLevelLabel.text = [NSString stringWithFormat:@"%.0f / %.0f",self.user.experience, self.user.experienceToNextLevel];
+    self.strengthLabel.text = [NSString stringWithFormat:@"%.0f Strength",self.user.strength];
+    self.magicLabel.text = [NSString stringWithFormat:@"%.0f / %.0f Magic",self.user.magic, self.user.totalMagic];
+    self.vitalityAndTotalVitalityLabel.text = [NSString stringWithFormat:@"%.0f / %.0f Vitality",self.user.vitality, self.user.totalVitality];
+    [self.view setNeedsDisplay];
 }
 
 - (void) editButtonTapped

@@ -35,7 +35,6 @@
     
     // set first button text
     if (self.user) {
-        NSLog(@"Yes a user");
         NSString *buttonText = [NSString stringWithFormat:@"%@ : Level %d %@", self.user.name, self.user.level, self.user.characterClass];
         [self.firstSlotButton setTitle:buttonText forState:UIControlStateNormal];
     }
