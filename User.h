@@ -18,6 +18,7 @@
 @property int level;
 @property float strength;
 @property float magic;
+@property float totalMagic;
 @property double experience;
 @property double experienceToNextLevel;
 @property double gold;

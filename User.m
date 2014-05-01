@@ -12,7 +12,7 @@
 @implementation User
 
 - (id) init {
-    self = [self initWithName:@"defaultName" description:@"defaultDescription" tutorial:@"NO" setup:(BOOL) NO characterClass:@"Warrior" level:(int) 1 strength:(float) 10 magic:(float) 10 experience:(double) 0 experienceToNextLevel:(double) 1000 gold:(double) 0 vitality:(double) 50 totalVitality:(double) 50];
+    self = [self initWithName:@"defaultName" description:@"defaultDescription" tutorial:@"NO" setup:(BOOL) NO characterClass:@"Warrior" level:(int) 1 strength:(float) 10 magic:(float) 10 totalMagic:(float) 10 experience:(double) 0 experienceToNextLevel:(double) 1000 gold:(double) 0 vitality:(double) 50 totalVitality:(double) 50];
     return self;
 }
 
@@ -24,6 +24,7 @@
               level:(int)aLevel
            strength:(float)anStrength
               magic:(float)anMagic
+         totalMagic:(float)anTotalMagic
          experience:(double)anExperience
 experienceToNextLevel:(double)anExperienceToNextLevel
                gold:(double)anGold
@@ -40,6 +41,7 @@ experienceToNextLevel:(double)anExperienceToNextLevel
         self.level = aLevel;
         self.strength = anStrength;
         self.magic = anMagic;
+        self.totalMagic = anTotalMagic;
         self.experience = anExperience;
         self.experienceToNextLevel = anExperienceToNextLevel;
         self.gold = anGold;
@@ -92,6 +94,7 @@ experienceToNextLevel:(double)anExperienceToNextLevel
         self.level = [aDecoder decodeIntForKey:@"level"];
         self.strength = [aDecoder decodeFloatForKey:@"strength"];
         self.magic = [aDecoder decodeFloatForKey:@"magic"];
+        self.totalMagic = [aDecoder decodeFloatForKey:@"totalMagic"];
         self.experience = [aDecoder decodeDoubleForKey:@"experience"];
         self.experienceToNextLevel = [aDecoder decodeDoubleForKey:@"experienceToNextLevel"];
         self.gold = [aDecoder decodeDoubleForKey:@"gold"];
@@ -112,6 +115,7 @@ experienceToNextLevel:(double)anExperienceToNextLevel
     [anEncoder encodeInt:self.level forKey:@"level"];
     [anEncoder encodeFloat:self.strength forKey:@"strength"];
     [anEncoder encodeFloat:self.magic forKey:@"magic"];
+    [anEncoder encodeFloat:self.totalMagic forKey:@"totalMagic"];
     [anEncoder encodeDouble:self.experience forKey:@"experience"];
     [anEncoder encodeDouble:self.experienceToNextLevel
                      forKey:@"experienceToNextLevel"];
