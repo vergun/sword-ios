@@ -13,6 +13,16 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *description;
 @property (strong, nonatomic) NSString *tutorial;
+@property BOOL setup;
+@property (strong, nonatomic) NSString *characterClass;
+@property int level;
+@property float strength;
+@property float magic;
+@property double experience;
+@property double experienceToNextLevel;
+@property double gold;
+@property double vitality;
+@property double totalVitality;
 
 + (NSString *) getPathToArchive;
 + (void) saveUser:(User *)aUser;

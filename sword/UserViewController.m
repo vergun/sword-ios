@@ -21,13 +21,25 @@
     if (self) {
         self.title = @"User";
         self.tabBarItem.image = [UIImage imageNamed:@"tabBarUserIcon"];
+        self.user = [User getUser];
+        UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                       target:self
+                                       action:@selector(editButtonTapped)];
+        self.navigationItem.rightBarButtonItem = editButton;
     }
     return self;
+}
+
+- (void) editButtonTapped
+{
+    NSLog(@"Edit button tapped!");
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.nameLabel.text = self.user.name;
     
     // enteringBackground
     [[NSNotificationCenter defaultCenter]

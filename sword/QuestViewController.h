@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface QuestViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIButton *firstSlotButton;
 @property (strong, nonatomic) IBOutlet UIButton *secondSlotButton;
 @property (strong, nonatomic) IBOutlet UIButton *thirdSlotButton;
+@property (strong, nonatomic) User *user;
 
 @end

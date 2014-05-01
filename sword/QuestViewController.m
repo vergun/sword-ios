@@ -7,12 +7,13 @@
 //
 
 #import "QuestViewController.h"
+#import "QuestSetupViewController.h"
 #import "EnemyViewController.h"
 #import "MapViewController.h"
 #import "UserViewController.h"
 #import "WorldViewController.h"
 #import "InventoryTableViewController.h"
-#import "QuestSetupViewController.h"
+#import "User.h"
 
 @interface QuestViewController ()
 @end
@@ -23,7 +24,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.user = [User getUser];
     }
     return self;
 }
@@ -31,6 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // hide second and third slot button until support for multiple slots
+    self.secondSlotButton.hidden = YES;
+    self.thirdSlotButton.hidden = YES;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -48,7 +53,8 @@
 
 // if quest exists display setupvc otherwise display normal path
 - (IBAction)tappedFirstSlotButton:(id)sender {
-    [self setupPath];
+    if (self.user.setup) {[self normalPath];}
+    else {[self setupPath];}
 }
 - (IBAction)tappedSecondSlotButton:(id)sender {
     [self setupPath];
@@ -63,8 +69,18 @@
     QuestSetupViewController *questSetupVC = [[QuestSetupViewController alloc] init];
     [self presentViewController:questSetupVC animated:YES completion:nil];
 }
-                                    
--(void)normalPath
+
+- (void)enteringBackground
+{
+    [User saveUser:self.user];
+}
+
+- (void)enteringForeground
+{
+    self.user = [User getUser];
+}
+
+- (void) normalPath
 {
     //ViewControllers
     EnemyViewController* enemyVC = [[EnemyViewController alloc] init];
@@ -72,7 +88,7 @@
     UserViewController *userVC = [[UserViewController alloc] init];
     InventoryTableViewController *inventoryTableViewController = [[InventoryTableViewController alloc] init];
     WorldViewController *worldVC = [[WorldViewController alloc] init];
-
+    
     //NavigationControllers
     UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:enemyVC];
     UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
@@ -87,6 +103,8 @@
     
     //DisplayView
     [self presentViewController:tabBarController animated:NO completion:nil];
+    
 }
+                                    
 
 @end

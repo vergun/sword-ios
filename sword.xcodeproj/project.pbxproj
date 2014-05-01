@@ -40,6 +40,9 @@
 		9EDE5E241911136F002A3D93 /* Quest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE5E231911136F002A3D93 /* Quest.m */; };
 		9EDE5E2819116E20002A3D93 /* QuestSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE5E2619116E20002A3D93 /* QuestSetupViewController.m */; };
 		9EDE5E2919116E20002A3D93 /* QuestSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDE5E2719116E20002A3D93 /* QuestSetupViewController.xib */; };
+		9EDE5E2B191212AF002A3D93 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDE5E2A191212AF002A3D93 /* UserViewController.xib */; };
+		9EDE5E2E191218D9002A3D93 /* sorceress.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EDE5E2C191218D9002A3D93 /* sorceress.jpg */; };
+		9EDE5E2F191218D9002A3D93 /* warrior.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EDE5E2D191218D9002A3D93 /* warrior.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +105,9 @@
 		9EDE5E2519116E20002A3D93 /* QuestSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestSetupViewController.h; sourceTree = "<group>"; };
 		9EDE5E2619116E20002A3D93 /* QuestSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestSetupViewController.m; sourceTree = "<group>"; };
 		9EDE5E2719116E20002A3D93 /* QuestSetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestSetupViewController.xib; sourceTree = "<group>"; };
+		9EDE5E2A191212AF002A3D93 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		9EDE5E2C191218D9002A3D93 /* sorceress.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sorceress.jpg; sourceTree = "<group>"; };
+		9EDE5E2D191218D9002A3D93 /* warrior.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = warrior.jpg; sourceTree = "<group>"; };
 		AE0ED7A6D5184CA4A2460B1B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -208,6 +214,8 @@
 		9EDA52BB190E1E2100212715 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9EDE5E2C191218D9002A3D93 /* sorceress.jpg */,
+				9EDE5E2D191218D9002A3D93 /* warrior.jpg */,
 				9EDA52B0190E1E0800212715 /* tabBarEnemiesIcon.png */,
 				9EDA52B1190E1E0800212715 /* tabBarUserIcon.png */,
 				9EDA52B2190E1E0800212715 /* tabBarInventoryIcon.png */,
@@ -233,8 +241,11 @@
 		9EDA52C6190E287400212715 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9EDE5E31191220B5002A3D93 /* Quest */,
+				9EDE5E30191220AA002A3D93 /* Tutorial */,
 				9EDA52CA190E291A00212715 /* UserViewController.h */,
 				9EDA52CB190E291A00212715 /* UserViewController.m */,
+				9EDE5E2A191212AF002A3D93 /* UserViewController.xib */,
 				9EDA52BF190E1F9900212715 /* MapViewController.h */,
 				9EDA52C0190E1F9900212715 /* MapViewController.m */,
 				9EDA52BC190E1ED400212715 /* EnemyViewController.h */,
@@ -243,19 +254,33 @@
 				9EDA52D1190EC76A00212715 /* InventoryTableViewController.m */,
 				9EDA52D3190EC93E00212715 /* WorldViewController.h */,
 				9EDA52D4190EC93E00212715 /* WorldViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9EDE5E30191220AA002A3D93 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				9E0FBAE51910503B00865E37 /* TutorialChildViewController.xib */,
 				9E0FBAE01910502D00865E37 /* TutorialViewController.h */,
 				9E0FBAE11910502D00865E37 /* TutorialViewController.m */,
 				9E0FBAE31910503B00865E37 /* TutorialChildViewController.h */,
 				9E0FBAE41910503B00865E37 /* TutorialChildViewController.m */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		9EDE5E31191220B5002A3D93 /* Quest */ = {
+			isa = PBXGroup;
+			children = (
 				9EDE5E1D19111176002A3D93 /* QuestViewController.h */,
-				9EDE5E1E19111176002A3D93 /* QuestViewController.m */,
-				9EDE5E1F19111176002A3D93 /* QuestViewController.xib */,
-				9E0FBAE51910503B00865E37 /* TutorialChildViewController.xib */,
 				9EDE5E2519116E20002A3D93 /* QuestSetupViewController.h */,
 				9EDE5E2619116E20002A3D93 /* QuestSetupViewController.m */,
 				9EDE5E2719116E20002A3D93 /* QuestSetupViewController.xib */,
+				9EDE5E1E19111176002A3D93 /* QuestViewController.m */,
+				9EDE5E1F19111176002A3D93 /* QuestViewController.xib */,
 			);
-			name = Controllers;
+			name = Quest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,10 +360,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EDE5E2B191212AF002A3D93 /* UserViewController.xib in Resources */,
+				9EDE5E2F191218D9002A3D93 /* warrior.jpg in Resources */,
 				0DDB3306190D62230079F5AE /* InfoPlist.strings in Resources */,
 				9EDA52B6190E1E0800212715 /* tabBarUserIcon.png in Resources */,
 				9EDA52B8190E1E0800212715 /* tabBarWorldIcon.png in Resources */,
 				9EDE5E2119111176002A3D93 /* QuestViewController.xib in Resources */,
+				9EDE5E2E191218D9002A3D93 /* sorceress.jpg in Resources */,
 				9EDA52B9190E1E0800212715 /* tabBarMapIcon.png in Resources */,
 				0DDB330E190D62230079F5AE /* Images.xcassets in Resources */,
 				9EDE5E2919116E20002A3D93 /* QuestSetupViewController.xib in Resources */,
