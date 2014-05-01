@@ -7,6 +7,7 @@
 //
 
 #import "UserViewController.h"
+#import "EditUserViewController.h"
 #import "User.h"
 
 @interface UserViewController ()
@@ -33,7 +34,13 @@
 
 - (void) editButtonTapped
 {
-    NSLog(@"Edit button tapped!");
+    EditUserViewController *editView = [[EditUserViewController alloc] init];
+    [UIView animateWithDuration:0.75
+                     animations:^{
+                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                         [self.navigationController pushViewController:editView animated:NO];
+                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+                     }];
 }
 
 - (void)viewDidLoad
@@ -46,8 +53,6 @@
     self.strengthLabel.text = [NSString stringWithFormat:@"%.0f Strength",self.user.strength];
     self.magicLabel.text = [NSString stringWithFormat:@"%.0f / %.0f Magic",self.user.magic, self.user.totalMagic];
     self.vitalityAndTotalVitalityLabel.text = [NSString stringWithFormat:@"%.0f / %.0f Vitality",self.user.vitality, self.user.totalVitality];
-
-
 
     // enteringBackground
     [[NSNotificationCenter defaultCenter]

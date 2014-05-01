@@ -32,6 +32,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // set first button text
+    if (self.user) {
+        NSLog(@"Yes a user");
+        NSString *buttonText = [NSString stringWithFormat:@"%@ : Level %d %@", self.user.name, self.user.level, self.user.characterClass];
+        [self.firstSlotButton setTitle:buttonText forState:UIControlStateNormal];
+    }
+    
     // hide second and third slot button until support for multiple slots
     self.secondSlotButton.hidden = YES;
     self.thirdSlotButton.hidden = YES;
