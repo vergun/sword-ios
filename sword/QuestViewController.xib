@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestViewController">
             <connections>
-                <outlet property="firstSlotButton" destination="1bd-vh-VsN" id="sii-GN-ADE"/>
-                <outlet property="secondSlotButton" destination="M5h-hO-l22" id="lqE-Vb-tJ1"/>
-                <outlet property="thirdSlotButton" destination="cpC-aT-1YP" id="qTv-Z0-eUo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,34 +21,34 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5h-hO-l22">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5h-hO-l22">
                     <rect key="frame" x="20" y="269" width="280" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Open slot">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="tappedSecondSlotButton:" destination="-1" eventType="touchUpInside" id="zGZ-tJ-PJZ"/>
+                        <action selector="tappedSlotButton:" destination="-1" eventType="touchUpInside" id="a58-jM-4HL"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpC-aT-1YP">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpC-aT-1YP">
                     <rect key="frame" x="20" y="347" width="280" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Open slot">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="tappedThirdSlotButton:" destination="-1" eventType="touchUpInside" id="4F5-6n-ebV"/>
+                        <action selector="tappedSlotButton:" destination="-1" eventType="touchUpInside" id="P1v-kC-nMO"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bd-vh-VsN">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bd-vh-VsN">
                     <rect key="frame" x="20" y="189" width="280" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Open slot">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="tappedFirstSlotButton:" destination="-1" eventType="touchUpInside" id="lzY-OI-Ige"/>
+                        <action selector="tappedSlotButton:" destination="-1" eventType="touchUpInside" id="90W-5y-ZC4"/>
                     </connections>
                 </button>
             </subviews>

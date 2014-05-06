@@ -7,9 +7,11 @@
 //
 
 #import "EditUserViewController.h"
-#import "User.h"
 
 @interface EditUserViewController ()
+{
+    User* currentUser;
+}
 
 @end
 
@@ -19,28 +21,26 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.user = [User getUser];
-        [self.editNameTextField setPlaceholder:self.user.name];
+        currentUser = [[SwordAPI sharedInstance] getCurrentUser];
     }
     return self;
 }
 - (IBAction)editingNameTextFieldDidEnd:(id)sender {
-    NSLog(@"%@", [sender text]);
-    self.user.name = [sender text];
-    [User saveUser:self.user];
+    currentUser.name = [sender text];
+    [[SwordAPI sharedInstance] saveCurrentUser];
     [UIView animateWithDuration:0.75
                      animations:^{
                          [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
                          [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
                      }];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"user:didEditName" object:nil];
-    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.editNameTextField setText:currentUser.name];
     [self.editNameTextField becomeFirstResponder];
 
 }
@@ -48,7 +48,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

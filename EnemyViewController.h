@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EnemyViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIButton *FightButton;
+@property (weak, nonatomic) IBOutlet UILabel *monsterLabel;
 @end

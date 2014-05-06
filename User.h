@@ -10,29 +10,24 @@
 
 @interface User : NSObject
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *description;
-@property (strong, nonatomic) NSString *tutorial;
-@property BOOL setup;
-@property (strong, nonatomic) NSString *characterClass;
-@property int level;
-@property float strength;
-@property float magic;
-@property float totalMagic;
-@property double experience;
-@property double experienceToNextLevel;
-@property double gold;
-@property double vitality;
-@property double totalVitality;
+@property (strong, nonatomic) NSString *name, *description, *characterClass;
+@property BOOL enabled, setup;
+@property NSNumber *level, *strength, *magic, *totalMagic, *experience, *experienceToNextLevel, *gold, *vitality, *totalVitality, *index;
 
-+ (NSString *) getPathToArchive;
-+ (void) saveUser:(User *)aUser;
-+ (User *) getUser;
-
-
-+ (void) skipTutorial:(User*)aUser;
-- (BOOL) sawTutorial:(User*)aUser;
-
-
+- (id) initWithName:(NSString *)aName
+        description:(NSString *)aDescription
+     characterClass:(NSString *)aCharacterClass
+            enabled:(BOOL)isEnabled
+              setup:(BOOL)aSetup
+              level:(NSNumber *)aLevel
+           strength:(NSNumber *)aStrength
+              magic:(NSNumber *)aMagic
+         totalMagic:(NSNumber *)aTotalMagic
+         experience:(NSNumber *)anExperience
+experienceToNextLevel:(NSNumber *)anExperienceToNextLevel
+               gold:(NSNumber *)aGold
+           vitality:(NSNumber *)aVitality
+      totalVitality:(NSNumber *)aTotalVitality
+              index:(NSNumber *)anIndex;
 
 @end

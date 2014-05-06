@@ -12,10 +12,12 @@
 #import "UserViewController.h"
 #import "WorldViewController.h"
 #import "InventoryTableViewController.h"
-#import "User.h"
 
 
 @interface QuestSetupViewController ()
+{
+    User *currentUser;
+}
 @end
 
 @implementation QuestSetupViewController
@@ -24,23 +26,24 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.user = [User getUser];
+        currentUser = [[SwordAPI sharedInstance] getCurrentUser];
     }
     return self;
 }
+
 - (IBAction)didEnterCharacterName:(id)sender {
-    self.user.name = ((UITextField *)sender).text;
-    [User saveUser:self.user];
+    currentUser.name = ((UITextField *)sender).text;
+    [[SwordAPI sharedInstance] saveCurrentUser];
 }
 
 - (IBAction)didSelectCharacterClass:(id)sender {
     NSString *characterClass;
     UISegmentedControl * control = sender;
-    int selectedIndex = [control selectedSegmentIndex];
+    long selectedIndex = [control selectedSegmentIndex];
     if (selectedIndex == 0) { characterClass = @"Warrior";}
     if (selectedIndex == 1) { characterClass = @"Sorceress";}
-    self.user.characterClass = characterClass;
-    [User saveUser:self.user];
+    currentUser.characterClass = characterClass;
+    [[SwordAPI sharedInstance] saveCurrentUser];
 }
 
 - (void)viewDidLoad
@@ -57,19 +60,20 @@
 }
 
 - (IBAction)didPressContinue:(id)sender {
-    self.user.setup = YES;
-    [User saveUser:self.user];
+    currentUser.setup = YES;
+    currentUser.enabled = YES;
+    [[SwordAPI sharedInstance] saveCurrentUser];
     [self normalPath];
 }
 
 - (void)enteringBackground
 {
-    [User saveUser:self.user];
+    [[SwordAPI sharedInstance] saveCurrentUser];
 }
 
 - (void)enteringForeground
 {
-    self.user = [User getUser];
+    currentUser = [[SwordAPI sharedInstance] getCurrentUser];
 }
 
 -(void)normalPath
@@ -94,7 +98,8 @@
     [tabBarController setViewControllers:viewControllers];
     
     //DisplayView
-    [self presentViewController:tabBarController animated:NO completion:nil];
+    tabBarController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:tabBarController animated:YES completion:nil];
 }
 
 @end

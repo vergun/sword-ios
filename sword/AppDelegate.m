@@ -9,18 +9,20 @@
 #import "AppDelegate.h"
 #import "TutorialViewController.h"
 #import "QuestViewController.h"
-#import "User.h"
+#import "SwordAPI.h"
+@interface AppDelegate ()
+{
+    NSArray *allUsers;
+}
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    User *user = [User getUser];
-    
-    if (!user) { user = [[User alloc] init]; }
-        
-    if (![user sawTutorial:user]) { [self tutorialPath]; }
-    else { [self chooseQuestPath]; }
+    allUsers = [[SwordAPI sharedInstance] getUsers];
+    if ([allUsers[0] enabled] == NO && [allUsers[1] enabled] == NO && [allUsers[2] enabled] == NO) [self tutorialPath];
+    else [self chooseQuestPath];
     
     return YES;
 }
@@ -32,7 +34,7 @@
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
     
     // Quest
-    QuestViewController *questVC = [[QuestViewController alloc]init];
+    QuestViewController *questVC = [QuestViewController new];
     
     //RootViewController
     self.window.rootViewController = questVC;
@@ -49,7 +51,7 @@
     CGRect viewRect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
     
-    TutorialViewController *tutorialViewController = [[TutorialViewController alloc] init];
+    TutorialViewController *tutorialViewController = [TutorialViewController new];
     self.window.rootViewController = tutorialViewController;
     
     // Make key and visible

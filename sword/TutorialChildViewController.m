@@ -58,7 +58,7 @@
 
 
 {
-    self.screenNumberLabel.text = [NSString stringWithFormat:@"Screen #%d", self.index + 1];
+    self.screenNumberLabel.text = [NSString stringWithFormat:@"Screen #%ld", self.index + 1];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -74,9 +74,7 @@
 
 - (void)endTutorial
 {
-    User *user = [User getUser];
-    [User skipTutorial:user];
-    QuestViewController *viewController = [[QuestViewController alloc] init];
+    QuestViewController *viewController = [QuestViewController new];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 

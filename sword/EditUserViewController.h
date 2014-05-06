@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "User.h"
-
+#import "SwordAPI.h"
 @interface EditUserViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *editNameTextField;
-@property User *user;
 
 @end

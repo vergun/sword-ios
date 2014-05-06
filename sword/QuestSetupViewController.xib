@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -56,7 +56,7 @@
                     <rect key="frame" x="20" y="108" width="280" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                     <connections>
                         <action selector="didEnterCharacterName:" destination="-1" eventType="editingDidEndOnExit" id="ahc-5O-akk"/>
                     </connections>

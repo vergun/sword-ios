@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "User.h"
+#import "SwordAPI.h"
 
 @interface QuestSetupViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *characterNameInput;
 @property (strong, nonatomic) IBOutlet UIButton *continueButton;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *characterClassInput;
-@property (strong, nonatomic) User *user;
+
 @end

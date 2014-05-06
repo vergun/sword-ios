@@ -7,10 +7,11 @@
 //
 
 #import "UserViewController.h"
-#import "EditUserViewController.h"
-#import "User.h"
 
 @interface UserViewController ()
+{
+    User* currentUser;
+}
 
 @end
 
@@ -22,7 +23,7 @@
     if (self) {
         self.title = @"User";
         self.tabBarItem.image = [UIImage imageNamed:@"tabBarUserIcon"];
-        self.user = [User getUser];
+        currentUser = [[SwordAPI sharedInstance] getCurrentUser];
         UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
                                        initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
                                        target:self
@@ -36,13 +37,13 @@
 
 - (void) reloadView:(NSNotification *) notification
 {
-    self.user = [User getUser];
-    self.nameLabel.text = self.user.name;
-    self.levelAndClassLabel.text = [NSString stringWithFormat:@"Level %d %@",self.user.level,self.user.characterClass];
-    self.experienceAndExperienceToNextLevelLabel.text = [NSString stringWithFormat:@"%.0f / %.0f",self.user.experience, self.user.experienceToNextLevel];
-    self.strengthLabel.text = [NSString stringWithFormat:@"%.0f Strength",self.user.strength];
-    self.magicLabel.text = [NSString stringWithFormat:@"%.0f / %.0f Magic",self.user.magic, self.user.totalMagic];
-    self.vitalityAndTotalVitalityLabel.text = [NSString stringWithFormat:@"%.0f / %.0f Vitality",self.user.vitality, self.user.totalVitality];
+    currentUser = [[SwordAPI sharedInstance] getCurrentUser];
+    self.nameLabel.text = currentUser.name;
+    self.levelAndClassLabel.text = [NSString stringWithFormat:@"Level %@ %@",currentUser.level,currentUser.characterClass];
+    self.experienceAndExperienceToNextLevelLabel.text = [NSString stringWithFormat:@"%@ / %@",currentUser.experience, currentUser.experienceToNextLevel];
+    self.strengthLabel.text = [NSString stringWithFormat:@"%@ Strength",currentUser.strength];
+    self.magicLabel.text = [NSString stringWithFormat:@"%@ / %@ Magic",currentUser.magic, currentUser.totalMagic];
+    self.vitalityAndTotalVitalityLabel.text = [NSString stringWithFormat:@"%@ / %@ Vitality",currentUser.vitality, currentUser.totalVitality];
     [self.view setNeedsDisplay];
 }
 
@@ -60,13 +61,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.nameLabel.text = self.user.name;
-    self.levelAndClassLabel.text = [NSString stringWithFormat:@"Level %d %@",self.user.level,self.user.characterClass];
-    self.experienceAndExperienceToNextLevelLabel.text = [NSString stringWithFormat:@"%.0f / %.0f",self.user.experience, self.user.experienceToNextLevel];
+    self.nameLabel.text = currentUser.name;
+    self.levelAndClassLabel.text = [NSString stringWithFormat:@"Level %@ %@", currentUser.level, currentUser.characterClass];
+    self.experienceAndExperienceToNextLevelLabel.text = [NSString stringWithFormat:@"%@ / %@", currentUser.experience, currentUser.experienceToNextLevel];
     
-    self.strengthLabel.text = [NSString stringWithFormat:@"%.0f Strength",self.user.strength];
-    self.magicLabel.text = [NSString stringWithFormat:@"%.0f / %.0f Magic",self.user.magic, self.user.totalMagic];
-    self.vitalityAndTotalVitalityLabel.text = [NSString stringWithFormat:@"%.0f / %.0f Vitality",self.user.vitality, self.user.totalVitality];
+    self.strengthLabel.text = [NSString stringWithFormat:@"%@ Strength", currentUser.strength];
+    self.magicLabel.text = [NSString stringWithFormat:@"%@ / %@ Magic", currentUser.magic, currentUser.totalMagic];
+    self.vitalityAndTotalVitalityLabel.text = [NSString stringWithFormat:@"%@ / %@ Vitality", currentUser.vitality, currentUser.totalVitality];
 
     // enteringBackground
     [[NSNotificationCenter defaultCenter]
@@ -85,29 +86,25 @@
 
 - (void)enteringBackground
 {
-    [User saveUser:self.user];
+    [[SwordAPI sharedInstance] saveCurrentUser];
 }
 
 - (void)enteringForeground
-{
-    self.user = [User getUser];
+{    
+    currentUser = [[SwordAPI sharedInstance] getCurrentUser];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)leaveCurrentGame:(id)sender {
+    [[SwordAPI sharedInstance] saveCurrentUser];
+    QuestViewController *questVC = [QuestViewController new];
+    [self presentViewController:questVC animated:YES completion:nil];
+
 }
-*/
 
 @end

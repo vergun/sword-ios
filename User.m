@@ -7,99 +7,66 @@
 //
 
 #import "User.h"
-#import "AFNetworking.h"
 
 @implementation User
 
-- (id) init {
-    self = [self initWithName:@"defaultName" description:@"defaultDescription" tutorial:@"NO" setup:(BOOL) NO characterClass:@"Warrior" level:(int) 1 strength:(float) 10 magic:(float) 10 totalMagic:(float) 10 experience:(double) 0 experienceToNextLevel:(double) 1000 gold:(double) 0 vitality:(double) 50 totalVitality:(double) 50];
-    return self;
-}
-
 - (id) initWithName:(NSString *)aName
         description:(NSString *)aDescription
-        tutorial:(NSString *)aTutorial
+     characterClass:(NSString *)aCharacterClass
+        enabled:(BOOL)isEnabled
         setup:(BOOL)aSetup
-        characterClass:(NSString *)aCharacterClass
-              level:(int)aLevel
-           strength:(float)anStrength
-              magic:(float)anMagic
-         totalMagic:(float)anTotalMagic
-         experience:(double)anExperience
-experienceToNextLevel:(double)anExperienceToNextLevel
-               gold:(double)anGold
-           vitality:(double)anVitality
-    totalVitality:(double)anTotalVitality
+              level:(NSNumber *)aLevel
+           strength:(NSNumber *)aStrength
+              magic:(NSNumber *)aMagic
+         totalMagic:(NSNumber *)aTotalMagic
+         experience:(NSNumber *)anExperience
+experienceToNextLevel:(NSNumber *)anExperienceToNextLevel
+               gold:(NSNumber *)aGold
+           vitality:(NSNumber *)aVitality
+    totalVitality:(NSNumber *)aTotalVitality
+              index:(NSNumber *)anIndex
 {
-    if (self) {
-        self = [super init];
+    if (self = [super init]) {
         self.name = aName;
         self.description = aDescription;
-        self.tutorial = aTutorial;
-        self.setup = aSetup;
         self.characterClass = aCharacterClass;
+        self.enabled = isEnabled;
+        self.setup = aSetup;
         self.level = aLevel;
-        self.strength = anStrength;
-        self.magic = anMagic;
-        self.totalMagic = anTotalMagic;
+        self.strength = aStrength;
+        self.magic = aMagic;
+        self.totalMagic = aTotalMagic;
         self.experience = anExperience;
         self.experienceToNextLevel = anExperienceToNextLevel;
-        self.gold = anGold;
-        self.vitality = anVitality;
-        self.totalVitality = anTotalVitality;
-        [User saveUser:self];
+        self.gold = aGold;
+        self.vitality = aVitality;
+        self.totalVitality = aTotalVitality;
+        self.index = anIndex;
     }
     return self;
     
 }
 
-+ (void) saveUser:(User *)aUser
-{
-  [NSKeyedArchiver archiveRootObject:aUser toFile:[User getPathToArchive]];
-}
-
-+ (User *) getUser
-{
-    return [NSKeyedUnarchiver unarchiveObjectWithFile:[User getPathToArchive]];
-}
-
-+ (NSString *) getPathToArchive
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docsDir = [paths objectAtIndex:0];
-    return [docsDir stringByAppendingPathComponent:@"user.model"];
-}
-
-+ (void) skipTutorial:(User*)aUser
-{
-    aUser.tutorial = @"YES";
-    [User saveUser:aUser];
-}
-
-- (BOOL) sawTutorial:(User*)aUser
-{
-    return [aUser.tutorial isEqualToString:@"YES"] ? YES : NO;
-}
-
-- (User *) initWithCoder:(NSCoder *)aDecoder
+- (id) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];
     if (self)
     {
-        self.name = [aDecoder decodeObjectForKey:@"name"];
-        self.description = [aDecoder decodeObjectForKey:@"description"];
-        self.tutorial = [aDecoder decodeObjectForKey:@"tutorial"];
-        self.setup = [aDecoder decodeBoolForKey:@"setup"];
-        self.characterClass = [aDecoder decodeObjectForKey:@"characterClass"];
-        self.level = [aDecoder decodeIntForKey:@"level"];
-        self.strength = [aDecoder decodeFloatForKey:@"strength"];
-        self.magic = [aDecoder decodeFloatForKey:@"magic"];
-        self.totalMagic = [aDecoder decodeFloatForKey:@"totalMagic"];
-        self.experience = [aDecoder decodeDoubleForKey:@"experience"];
-        self.experienceToNextLevel = [aDecoder decodeDoubleForKey:@"experienceToNextLevel"];
-        self.gold = [aDecoder decodeDoubleForKey:@"gold"];
-        self.vitality = [aDecoder decodeDoubleForKey:@"vitality"];
-        self.totalVitality = [aDecoder decodeDoubleForKey:@"totalVitality"];
+        _name = [aDecoder decodeObjectForKey:@"name"];
+        _description = [aDecoder decodeObjectForKey:@"description"];
+        _characterClass = [aDecoder decodeObjectForKey:@"characterClass"];
+        _enabled = [aDecoder decodeBoolForKey:@"enabled"];
+        _setup = [aDecoder decodeBoolForKey:@"setup"];
+        _level = [aDecoder decodeObjectForKey:@"level"];
+        _strength = [aDecoder decodeObjectForKey:@"strength"];
+        _magic = [aDecoder decodeObjectForKey:@"magic"];
+        _totalMagic = [aDecoder decodeObjectForKey:@"totalMagic"];
+        _experience = [aDecoder decodeObjectForKey:@"experience"];
+        _experienceToNextLevel = [aDecoder decodeObjectForKey:@"experienceToNextLevel"];
+        _gold = [aDecoder decodeObjectForKey:@"gold"];
+        _vitality = [aDecoder decodeObjectForKey:@"vitality"];
+        _totalVitality = [aDecoder decodeObjectForKey:@"totalVitality"];
+        _index = [aDecoder decodeObjectForKey:@"index"];
 
     }
     return self;
@@ -109,20 +76,20 @@ experienceToNextLevel:(double)anExperienceToNextLevel
 {
     [anEncoder encodeObject:self.name forKey:@"name"];
     [anEncoder encodeObject:self.description forKey:@"description"];
-    [anEncoder encodeObject:self.tutorial forKey:@"tutorial"];
+    [anEncoder encodeBool:self.enabled forKey:@"enabled"];
     [anEncoder encodeBool:self.setup forKey:@"setup"];
     [anEncoder encodeObject:self.characterClass forKey:@"characterClass"];
-    [anEncoder encodeInt:self.level forKey:@"level"];
-    [anEncoder encodeFloat:self.strength forKey:@"strength"];
-    [anEncoder encodeFloat:self.magic forKey:@"magic"];
-    [anEncoder encodeFloat:self.totalMagic forKey:@"totalMagic"];
-    [anEncoder encodeDouble:self.experience forKey:@"experience"];
-    [anEncoder encodeDouble:self.experienceToNextLevel
+    [anEncoder encodeObject:self.level forKey:@"level"];
+    [anEncoder encodeObject:self.strength forKey:@"strength"];
+    [anEncoder encodeObject:self.magic forKey:@"magic"];
+    [anEncoder encodeObject:self.totalMagic forKey:@"totalMagic"];
+    [anEncoder encodeObject:self.experience forKey:@"experience"];
+    [anEncoder encodeObject:self.experienceToNextLevel
                      forKey:@"experienceToNextLevel"];
-    [anEncoder encodeDouble:self.gold forKey:@"gold"];
-    [anEncoder encodeDouble:self.vitality forKey:@"vitality"];
-    [anEncoder encodeDouble:self.totalVitality forKey:@"totalVitality"];
-
+    [anEncoder encodeObject:self.gold forKey:@"gold"];
+    [anEncoder encodeObject:self.vitality forKey:@"vitality"];
+    [anEncoder encodeObject:self.totalVitality forKey:@"totalVitality"];
+    [anEncoder encodeObject:self.index forKey:@"index"];
 }
 
 @end

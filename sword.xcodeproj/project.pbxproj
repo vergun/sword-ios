@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D32C6921916F67500F1B0FF /* SwordAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D32C6911916F67500F1B0FF /* SwordAPI.m */; };
+		0D32C6951916F6E200F1B0FF /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D32C6941916F6E200F1B0FF /* PersistencyManager.m */; };
+		0D32C6981916F6F700F1B0FF /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D32C6971916F6F700F1B0FF /* HTTPClient.m */; };
+		0D32C69B1917312500F1B0FF /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D32C69A1917312500F1B0FF /* Calculator.m */; };
+		0D5B7BFE1918F2B1000FA3F6 /* EnemyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5B7BFD1918F2B1000FA3F6 /* EnemyView.xib */; };
+		0D5B7C011918F600000FA3F6 /* PersistencyManager+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C001918F600000FA3F6 /* PersistencyManager+Utility.m */; };
 		0DDB32FC190D62230079F5AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDB32FB190D62230079F5AE /* Foundation.framework */; };
 		0DDB32FE190D62230079F5AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDB32FD190D62230079F5AE /* CoreGraphics.framework */; };
 		0DDB3300190D62230079F5AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDB32FF190D62230079F5AE /* UIKit.framework */; };
@@ -31,13 +37,12 @@
 		9EDA52BE190E1ED400212715 /* EnemyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52BD190E1ED400212715 /* EnemyViewController.m */; };
 		9EDA52C1190E1F9900212715 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52C0190E1F9900212715 /* MapViewController.m */; };
 		9EDA52C4190E286200212715 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52C3190E286200212715 /* User.m */; };
-		9EDA52C9190E28AB00212715 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52C8190E28AB00212715 /* Enemy.m */; };
+		9EDA52C9190E28AB00212715 /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52C8190E28AB00212715 /* Monster.m */; };
 		9EDA52CC190E291A00212715 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52CB190E291A00212715 /* UserViewController.m */; };
 		9EDA52D2190EC76A00212715 /* InventoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52D1190EC76A00212715 /* InventoryTableViewController.m */; };
 		9EDA52D5190EC93E00212715 /* WorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52D4190EC93E00212715 /* WorldViewController.m */; };
 		9EDE5E2019111176002A3D93 /* QuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE5E1E19111176002A3D93 /* QuestViewController.m */; };
 		9EDE5E2119111176002A3D93 /* QuestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDE5E1F19111176002A3D93 /* QuestViewController.xib */; };
-		9EDE5E241911136F002A3D93 /* Quest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE5E231911136F002A3D93 /* Quest.m */; };
 		9EDE5E2819116E20002A3D93 /* QuestSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE5E2619116E20002A3D93 /* QuestSetupViewController.m */; };
 		9EDE5E2919116E20002A3D93 /* QuestSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDE5E2719116E20002A3D93 /* QuestSetupViewController.xib */; };
 		9EDE5E2B191212AF002A3D93 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDE5E2A191212AF002A3D93 /* UserViewController.xib */; };
@@ -58,6 +63,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D32C6901916F67500F1B0FF /* SwordAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwordAPI.h; sourceTree = "<group>"; };
+		0D32C6911916F67500F1B0FF /* SwordAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwordAPI.m; sourceTree = "<group>"; };
+		0D32C6931916F6E200F1B0FF /* PersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistencyManager.h; sourceTree = "<group>"; };
+		0D32C6941916F6E200F1B0FF /* PersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistencyManager.m; sourceTree = "<group>"; };
+		0D32C6961916F6F700F1B0FF /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
+		0D32C6971916F6F700F1B0FF /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
+		0D32C6991917312500F1B0FF /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		0D32C69A1917312500F1B0FF /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		0D5B7BFD1918F2B1000FA3F6 /* EnemyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnemyView.xib; sourceTree = "<group>"; };
+		0D5B7BFF1918F600000FA3F6 /* PersistencyManager+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PersistencyManager+Utility.h"; sourceTree = "<group>"; };
+		0D5B7C001918F600000FA3F6 /* PersistencyManager+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PersistencyManager+Utility.m"; sourceTree = "<group>"; };
 		0DDB32F8190D62230079F5AE /* sword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDB32FB190D62230079F5AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0DDB32FD190D62230079F5AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,8 +107,8 @@
 		9EDA52C0190E1F9900212715 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		9EDA52C2190E286200212715 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		9EDA52C3190E286200212715 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
-		9EDA52C7190E28AB00212715 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
-		9EDA52C8190E28AB00212715 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		9EDA52C7190E28AB00212715 /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster.h; sourceTree = "<group>"; };
+		9EDA52C8190E28AB00212715 /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster.m; sourceTree = "<group>"; };
 		9EDA52CA190E291A00212715 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		9EDA52CB190E291A00212715 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		9EDA52D0190EC76A00212715 /* InventoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryTableViewController.h; sourceTree = "<group>"; };
@@ -102,8 +118,6 @@
 		9EDE5E1D19111176002A3D93 /* QuestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestViewController.h; sourceTree = "<group>"; };
 		9EDE5E1E19111176002A3D93 /* QuestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestViewController.m; sourceTree = "<group>"; };
 		9EDE5E1F19111176002A3D93 /* QuestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestViewController.xib; sourceTree = "<group>"; };
-		9EDE5E221911136F002A3D93 /* Quest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quest.h; sourceTree = "<group>"; };
-		9EDE5E231911136F002A3D93 /* Quest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quest.m; sourceTree = "<group>"; };
 		9EDE5E2519116E20002A3D93 /* QuestSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestSetupViewController.h; sourceTree = "<group>"; };
 		9EDE5E2619116E20002A3D93 /* QuestSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestSetupViewController.m; sourceTree = "<group>"; };
 		9EDE5E2719116E20002A3D93 /* QuestSetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestSetupViewController.xib; sourceTree = "<group>"; };
@@ -141,6 +155,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D32C68F1916F64200F1B0FF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0D32C6901916F67500F1B0FF /* SwordAPI.h */,
+				0D32C6911916F67500F1B0FF /* SwordAPI.m */,
+				0D32C6931916F6E200F1B0FF /* PersistencyManager.h */,
+				0D32C6941916F6E200F1B0FF /* PersistencyManager.m */,
+				0D5B7BFF1918F600000FA3F6 /* PersistencyManager+Utility.h */,
+				0D5B7C001918F600000FA3F6 /* PersistencyManager+Utility.m */,
+				0D32C6961916F6F700F1B0FF /* HTTPClient.h */,
+				0D32C6971916F6F700F1B0FF /* HTTPClient.m */,
+				0D32C6991917312500F1B0FF /* Calculator.h */,
+				0D32C69A1917312500F1B0FF /* Calculator.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		0D5B7BFA1918F27B000FA3F6 /* Enemy */ = {
+			isa = PBXGroup;
+			children = (
+				9EDA52BC190E1ED400212715 /* EnemyViewController.h */,
+				9EDA52BD190E1ED400212715 /* EnemyViewController.m */,
+				0D5B7BFD1918F2B1000FA3F6 /* EnemyView.xib */,
+			);
+			name = Enemy;
+			sourceTree = "<group>";
+		};
 		0DDB32EF190D62230079F5AE = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +217,7 @@
 		0DDB3301190D62230079F5AE /* sword */ = {
 			isa = PBXGroup;
 			children = (
+				0D32C68F1916F64200F1B0FF /* API */,
 				9EDA52C6190E287400212715 /* Controllers */,
 				9EDA52C5190E286900212715 /* Models */,
 				0DDB330A190D62230079F5AE /* AppDelegate.h */,
@@ -235,10 +277,8 @@
 			children = (
 				9EDA52C2190E286200212715 /* User.h */,
 				9EDA52C3190E286200212715 /* User.m */,
-				9EDA52C7190E28AB00212715 /* Enemy.h */,
-				9EDA52C8190E28AB00212715 /* Enemy.m */,
-				9EDE5E221911136F002A3D93 /* Quest.h */,
-				9EDE5E231911136F002A3D93 /* Quest.m */,
+				9EDA52C7190E28AB00212715 /* Monster.h */,
+				9EDA52C8190E28AB00212715 /* Monster.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -251,8 +291,6 @@
 				9EDE5E30191220AA002A3D93 /* Tutorial */,
 				9EDA52BF190E1F9900212715 /* MapViewController.h */,
 				9EDA52C0190E1F9900212715 /* MapViewController.m */,
-				9EDA52BC190E1ED400212715 /* EnemyViewController.h */,
-				9EDA52BD190E1ED400212715 /* EnemyViewController.m */,
 				9EDA52D0190EC76A00212715 /* InventoryTableViewController.h */,
 				9EDA52D1190EC76A00212715 /* InventoryTableViewController.m */,
 				9EDA52D3190EC93E00212715 /* WorldViewController.h */,
@@ -302,6 +340,7 @@
 		9EDE5E38191229B6002A3D93 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0D5B7BFA1918F27B000FA3F6 /* Enemy */,
 				9EDE5E37191229AB002A3D93 /* User */,
 			);
 			name = Main;
@@ -394,6 +433,7 @@
 				9EDE5E36191229A2002A3D93 /* EditUserViewController.xib in Resources */,
 				9EDA52B9190E1E0800212715 /* tabBarMapIcon.png in Resources */,
 				0DDB330E190D62230079F5AE /* Images.xcassets in Resources */,
+				0D5B7BFE1918F2B1000FA3F6 /* EnemyView.xib in Resources */,
 				9EDE5E2919116E20002A3D93 /* QuestSetupViewController.xib in Resources */,
 				9EDA52B5190E1E0800212715 /* tabBarEnemiesIcon.png in Resources */,
 				9EDA52B7190E1E0800212715 /* tabBarInventoryIcon.png in Resources */,
@@ -449,10 +489,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EDE5E241911136F002A3D93 /* Quest.m in Sources */,
-				9EDA52C9190E28AB00212715 /* Enemy.m in Sources */,
+				9EDA52C9190E28AB00212715 /* Monster.m in Sources */,
 				9EDE5E2819116E20002A3D93 /* QuestSetupViewController.m in Sources */,
 				9EDE5E35191229A2002A3D93 /* EditUserViewController.m in Sources */,
+				0D32C69B1917312500F1B0FF /* Calculator.m in Sources */,
+				0D32C6951916F6E200F1B0FF /* PersistencyManager.m in Sources */,
 				0DDB330C190D62230079F5AE /* AppDelegate.m in Sources */,
 				9EDA52CC190E291A00212715 /* UserViewController.m in Sources */,
 				9EDA52C4190E286200212715 /* User.m in Sources */,
@@ -461,9 +502,12 @@
 				9E0FBAE21910502D00865E37 /* TutorialViewController.m in Sources */,
 				9EDA52C1190E1F9900212715 /* MapViewController.m in Sources */,
 				9EDA52D5190EC93E00212715 /* WorldViewController.m in Sources */,
+				0D32C6981916F6F700F1B0FF /* HTTPClient.m in Sources */,
 				0DDB3308190D62230079F5AE /* main.m in Sources */,
 				9EDA52D2190EC76A00212715 /* InventoryTableViewController.m in Sources */,
+				0D32C6921916F67500F1B0FF /* SwordAPI.m in Sources */,
 				9EDA52BE190E1ED400212715 /* EnemyViewController.m in Sources */,
+				0D5B7C011918F600000FA3F6 /* PersistencyManager+Utility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

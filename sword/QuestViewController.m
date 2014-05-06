@@ -13,9 +13,14 @@
 #import "UserViewController.h"
 #import "WorldViewController.h"
 #import "InventoryTableViewController.h"
-#import "User.h"
+#import "SwordAPI.h"
 
 @interface QuestViewController ()
+{
+    User *currentUser;
+    NSArray *allUsers;
+
+}
 @end
 
 @implementation QuestViewController
@@ -23,27 +28,26 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.user = [User getUser];
-    }
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // set first button text
-    if (self.user) {
-        NSString *buttonText = [NSString stringWithFormat:@"%@ : Level %d %@", self.user.name, self.user.level, self.user.characterClass];
-        [self.firstSlotButton setTitle:buttonText forState:UIControlStateNormal];
+    // allAlbums variable is defined once, assigned once, and used class-wide thereafter
+    allUsers = [[SwordAPI sharedInstance] getUsers];
+    if (allUsers)
+    {
+        for (int i=0; i < ([allUsers count]); i++)
+        {
+            User *user = allUsers[i];
+            if ([user enabled])
+            {
+                NSString *buttonText = [NSString stringWithFormat:@"%@ : Level %@ %@", [user name], [user level], [user characterClass]];
+                [(UIButton*)[self.view viewWithTag:i+1] setTitle:buttonText forState:UIControlStateNormal];
+            }
+        }
     }
-    
-    // hide second and third slot button until support for multiple slots
-    self.secondSlotButton.hidden = YES;
-    self.thirdSlotButton.hidden = YES;
-    
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,18 +62,14 @@
     
 }
 
-// if quest exists display setupvc otherwise display normal path
-- (IBAction)tappedFirstSlotButton:(id)sender {
-    if (self.user.setup) {[self normalPath];}
+- (IBAction)tappedSlotButton:(id)sender {
+    NSUInteger *selectedTag = (NSUInteger *)[sender tag];
+    currentUser  = [allUsers objectAtIndex:(NSUInteger) selectedTag-1];
+    [[SwordAPI sharedInstance] setCurrentUserAtIndex:[currentUser.index intValue]];
+    
+    if ([currentUser setup]) {[self normalPath];}
     else {[self setupPath];}
 }
-- (IBAction)tappedSecondSlotButton:(id)sender {
-    [self setupPath];
-}
-- (IBAction)tappedThirdSlotButton:(id)sender {
-    [self setupPath];
-}
-
 
 - (void)setupPath
 {
@@ -79,12 +79,12 @@
 
 - (void)enteringBackground
 {
-    [User saveUser:self.user];
+    [[SwordAPI sharedInstance] saveUsers];
 }
 
 - (void)enteringForeground
 {
-    self.user = [User getUser];
+    allUsers = [[SwordAPI sharedInstance] getUsers];
 }
 
 - (void) normalPath
@@ -109,7 +109,8 @@
     [tabBarController setViewControllers:viewControllers];
     
     //DisplayView
-    [self presentViewController:tabBarController animated:NO completion:nil];
+    tabBarController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:tabBarController animated:YES completion:nil];
     
 }
                                     
