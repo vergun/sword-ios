@@ -8,10 +8,12 @@
 
 #import "QuestSetupViewController.h"
 #import "EnemyViewController.h"
+#import "EnemyFrontViewController.h"
 #import "MapViewController.h"
 #import "UserViewController.h"
 #import "WorldViewController.h"
 #import "InventoryTableViewController.h"
+#import "SWEnemyViewController.h"
 
 
 @interface QuestSetupViewController ()

@@ -9,10 +9,12 @@
 #import "QuestViewController.h"
 #import "QuestSetupViewController.h"
 #import "EnemyViewController.h"
+#import "EnemyFrontViewController.h"
 #import "MapViewController.h"
 #import "UserViewController.h"
 #import "WorldViewController.h"
 #import "InventoryTableViewController.h"
+#import "SWEnemyViewController.h"
 #import "SwordAPI.h"
 
 @interface QuestViewController ()
@@ -90,14 +92,18 @@
 - (void) normalPath
 {
     //ViewControllers
-    EnemyViewController* enemyVC = [[EnemyViewController alloc] init];
+    EnemyViewController* enemyVC = [EnemyViewController new];
+    EnemyFrontViewController *enemyFrontVC = [EnemyFrontViewController new];
     MapViewController* mapVC = [[MapViewController alloc] init];
     UserViewController *userVC = [[UserViewController alloc] init];
     InventoryTableViewController *inventoryTableViewController = [[InventoryTableViewController alloc] init];
     WorldViewController *worldVC = [[WorldViewController alloc] init];
     
+    //SWView
+    SWEnemyViewController *SWEnemyVC = [[SWEnemyViewController alloc] initWithRearViewController:enemyVC frontViewController:enemyFrontVC];
+    
     //NavigationControllers
-    UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:enemyVC];
+    UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:SWEnemyVC];
     UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
     UINavigationController *userNavController = [[UINavigationController alloc] initWithRootViewController:userVC];
     UINavigationController *inventoryNavController = [[UINavigationController alloc] initWithRootViewController:inventoryTableViewController];

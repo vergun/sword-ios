@@ -19,8 +19,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Enemy";
-        self.tabBarItem.image = [UIImage imageNamed:@"tabBarEnemiesIcon"];
     }
     return self;
 }

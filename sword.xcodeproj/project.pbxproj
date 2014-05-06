@@ -13,6 +13,8 @@
 		0D32C69B1917312500F1B0FF /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D32C69A1917312500F1B0FF /* Calculator.m */; };
 		0D5B7BFE1918F2B1000FA3F6 /* EnemyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5B7BFD1918F2B1000FA3F6 /* EnemyView.xib */; };
 		0D5B7C011918F600000FA3F6 /* PersistencyManager+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C001918F600000FA3F6 /* PersistencyManager+Utility.m */; };
+		0D5B7C0519191D6E000FA3F6 /* SWEnemyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C0419191D6E000FA3F6 /* SWEnemyViewController.m */; };
+		0D5B7C0819191E3F000FA3F6 /* EnemyFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C0719191E3F000FA3F6 /* EnemyFrontViewController.m */; };
 		0DDB32FC190D62230079F5AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDB32FB190D62230079F5AE /* Foundation.framework */; };
 		0DDB32FE190D62230079F5AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDB32FD190D62230079F5AE /* CoreGraphics.framework */; };
 		0DDB3300190D62230079F5AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDB32FF190D62230079F5AE /* UIKit.framework */; };
@@ -74,6 +76,10 @@
 		0D5B7BFD1918F2B1000FA3F6 /* EnemyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnemyView.xib; sourceTree = "<group>"; };
 		0D5B7BFF1918F600000FA3F6 /* PersistencyManager+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PersistencyManager+Utility.h"; sourceTree = "<group>"; };
 		0D5B7C001918F600000FA3F6 /* PersistencyManager+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PersistencyManager+Utility.m"; sourceTree = "<group>"; };
+		0D5B7C0319191D6E000FA3F6 /* SWEnemyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWEnemyViewController.h; sourceTree = "<group>"; };
+		0D5B7C0419191D6E000FA3F6 /* SWEnemyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWEnemyViewController.m; sourceTree = "<group>"; };
+		0D5B7C0619191E3F000FA3F6 /* EnemyFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFrontViewController.h; sourceTree = "<group>"; };
+		0D5B7C0719191E3F000FA3F6 /* EnemyFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFrontViewController.m; sourceTree = "<group>"; };
 		0DDB32F8190D62230079F5AE /* sword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDB32FB190D62230079F5AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0DDB32FD190D62230079F5AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,8 +182,12 @@
 			isa = PBXGroup;
 			children = (
 				9EDA52BC190E1ED400212715 /* EnemyViewController.h */,
+				0D5B7C0319191D6E000FA3F6 /* SWEnemyViewController.h */,
+				0D5B7C0419191D6E000FA3F6 /* SWEnemyViewController.m */,
 				9EDA52BD190E1ED400212715 /* EnemyViewController.m */,
 				0D5B7BFD1918F2B1000FA3F6 /* EnemyView.xib */,
+				0D5B7C0619191E3F000FA3F6 /* EnemyFrontViewController.h */,
+				0D5B7C0719191E3F000FA3F6 /* EnemyFrontViewController.m */,
 			);
 			name = Enemy;
 			sourceTree = "<group>";
@@ -494,10 +504,12 @@
 				9EDE5E35191229A2002A3D93 /* EditUserViewController.m in Sources */,
 				0D32C69B1917312500F1B0FF /* Calculator.m in Sources */,
 				0D32C6951916F6E200F1B0FF /* PersistencyManager.m in Sources */,
+				0D5B7C0819191E3F000FA3F6 /* EnemyFrontViewController.m in Sources */,
 				0DDB330C190D62230079F5AE /* AppDelegate.m in Sources */,
 				9EDA52CC190E291A00212715 /* UserViewController.m in Sources */,
 				9EDA52C4190E286200212715 /* User.m in Sources */,
 				9E0FBAE61910503B00865E37 /* TutorialChildViewController.m in Sources */,
+				0D5B7C0519191D6E000FA3F6 /* SWEnemyViewController.m in Sources */,
 				9EDE5E2019111176002A3D93 /* QuestViewController.m in Sources */,
 				9E0FBAE21910502D00865E37 /* TutorialViewController.m in Sources */,
 				9EDA52C1190E1F9900212715 /* MapViewController.m in Sources */,
