@@ -9,15 +9,17 @@
 #import "QuestViewController.h"
 #import "QuestSetupViewController.h"
 #import "EnemyViewController.h"
-#import "EnemyFrontViewController.h"
 #import "MapViewController.h"
 #import "UserViewController.h"
 #import "WorldViewController.h"
 #import "InventoryTableViewController.h"
-#import "SWEnemyViewController.h"
 #import "SwordAPI.h"
+#import "SWRevealViewController.h"
+#import "FrontViewController.h"
+#import "RightViewController.h"
+#import "RearViewController.h"
 
-@interface QuestViewController ()
+@interface QuestViewController () <SWRevealViewControllerDelegate>
 {
     User *currentUser;
     NSArray *allUsers;
@@ -92,31 +94,46 @@
 - (void) normalPath
 {
     //ViewControllers
-    EnemyViewController* enemyVC = [EnemyViewController new];
-    EnemyFrontViewController *enemyFrontVC = [EnemyFrontViewController new];
+//    EnemyViewController* enemyVC = [EnemyViewController new];
     MapViewController* mapVC = [[MapViewController alloc] init];
     UserViewController *userVC = [[UserViewController alloc] init];
     InventoryTableViewController *inventoryTableViewController = [[InventoryTableViewController alloc] init];
     WorldViewController *worldVC = [[WorldViewController alloc] init];
     
-    //SWView
-    SWEnemyViewController *SWEnemyVC = [[SWEnemyViewController alloc] initWithRearViewController:enemyVC frontViewController:enemyFrontVC];
+    
+    
+    //SWView Test
+    FrontViewController *frontViewController = [FrontViewController new];
+    RearViewController *rearViewController = [RearViewController new];
+    RightViewController *rightViewController = [RightViewController new];
+    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
+    
+    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
+    
+    revealController.delegate = self;
+    revealController.rightViewController = rightViewController;
+//    self.viewController = revealController;
+    [self presentViewController:revealController animated:NO completion:nil];
     
     //NavigationControllers
-    UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:SWEnemyVC];
-    UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
-    UINavigationController *userNavController = [[UINavigationController alloc] initWithRootViewController:userVC];
-    UINavigationController *inventoryNavController = [[UINavigationController alloc] initWithRootViewController:inventoryTableViewController];
-    UINavigationController *worldNavController = [[UINavigationController alloc] initWithRootViewController:worldVC];
+//    UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:revealController];
+//    UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
+//    UINavigationController *userNavController = [[UINavigationController alloc] initWithRootViewController:userVC];
+//    UINavigationController *inventoryNavController = [[UINavigationController alloc] initWithRootViewController:inventoryTableViewController];
+//    UINavigationController *worldNavController = [[UINavigationController alloc] initWithRootViewController:worldVC];
     
     //TabBarController
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    NSArray *viewControllers = [NSArray arrayWithObjects: enemyNavController, mapNavController, userNavController, inventoryNavController, worldNavController, nil];
-    [tabBarController setViewControllers:viewControllers];
+//    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+//    NSArray *viewControllers = [NSArray arrayWithObjects: enemyNavController, mapNavController, userNavController, inventoryNavController, worldNavController, nil];
+//    [tabBarController setViewControllers:viewControllers];
     
     //DisplayView
-    tabBarController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self presentViewController:tabBarController animated:YES completion:nil];
+    //    return YES;
+    //    tabBarController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    //    [self presentViewController:tabBarController animated:YES completion:nil];
+    //    [self presentViewController:revealController animated:YES completion:nil];
+
     
 }
                                     

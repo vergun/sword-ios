@@ -13,8 +13,12 @@
 		0D32C69B1917312500F1B0FF /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D32C69A1917312500F1B0FF /* Calculator.m */; };
 		0D5B7BFE1918F2B1000FA3F6 /* EnemyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5B7BFD1918F2B1000FA3F6 /* EnemyView.xib */; };
 		0D5B7C011918F600000FA3F6 /* PersistencyManager+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C001918F600000FA3F6 /* PersistencyManager+Utility.m */; };
-		0D5B7C0519191D6E000FA3F6 /* SWEnemyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C0419191D6E000FA3F6 /* SWEnemyViewController.m */; };
-		0D5B7C0819191E3F000FA3F6 /* EnemyFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C0719191E3F000FA3F6 /* EnemyFrontViewController.m */; };
+		0D5B7C0D1919D0C3000FA3F6 /* FrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C0C1919D0C3000FA3F6 /* FrontViewController.m */; };
+		0D5B7C111919D0D0000FA3F6 /* RearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C0F1919D0D0000FA3F6 /* RearViewController.m */; };
+		0D5B7C121919D0D0000FA3F6 /* RearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5B7C101919D0D0000FA3F6 /* RearViewController.xib */; };
+		0D5B7C161919D0DE000FA3F6 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C141919D0DE000FA3F6 /* RightViewController.m */; };
+		0D5B7C171919D0DE000FA3F6 /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5B7C151919D0DE000FA3F6 /* RightViewController.xib */; };
+		0D5B7C1C1919D703000FA3F6 /* FrontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5B7C1B1919D703000FA3F6 /* FrontViewController.xib */; };
 		0DDB32FC190D62230079F5AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDB32FB190D62230079F5AE /* Foundation.framework */; };
 		0DDB32FE190D62230079F5AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDB32FD190D62230079F5AE /* CoreGraphics.framework */; };
 		0DDB3300190D62230079F5AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDB32FF190D62230079F5AE /* UIKit.framework */; };
@@ -76,10 +80,15 @@
 		0D5B7BFD1918F2B1000FA3F6 /* EnemyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnemyView.xib; sourceTree = "<group>"; };
 		0D5B7BFF1918F600000FA3F6 /* PersistencyManager+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PersistencyManager+Utility.h"; sourceTree = "<group>"; };
 		0D5B7C001918F600000FA3F6 /* PersistencyManager+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PersistencyManager+Utility.m"; sourceTree = "<group>"; };
-		0D5B7C0319191D6E000FA3F6 /* SWEnemyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWEnemyViewController.h; sourceTree = "<group>"; };
-		0D5B7C0419191D6E000FA3F6 /* SWEnemyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWEnemyViewController.m; sourceTree = "<group>"; };
-		0D5B7C0619191E3F000FA3F6 /* EnemyFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFrontViewController.h; sourceTree = "<group>"; };
-		0D5B7C0719191E3F000FA3F6 /* EnemyFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFrontViewController.m; sourceTree = "<group>"; };
+		0D5B7C0B1919D0C3000FA3F6 /* FrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontViewController.h; sourceTree = "<group>"; };
+		0D5B7C0C1919D0C3000FA3F6 /* FrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontViewController.m; sourceTree = "<group>"; };
+		0D5B7C0E1919D0D0000FA3F6 /* RearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearViewController.h; sourceTree = "<group>"; };
+		0D5B7C0F1919D0D0000FA3F6 /* RearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearViewController.m; sourceTree = "<group>"; };
+		0D5B7C101919D0D0000FA3F6 /* RearViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RearViewController.xib; sourceTree = "<group>"; };
+		0D5B7C131919D0DE000FA3F6 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		0D5B7C141919D0DE000FA3F6 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		0D5B7C151919D0DE000FA3F6 /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightViewController.xib; sourceTree = "<group>"; };
+		0D5B7C1B1919D703000FA3F6 /* FrontViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrontViewController.xib; sourceTree = "<group>"; };
 		0DDB32F8190D62230079F5AE /* sword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDB32FB190D62230079F5AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0DDB32FD190D62230079F5AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -182,12 +191,17 @@
 			isa = PBXGroup;
 			children = (
 				9EDA52BC190E1ED400212715 /* EnemyViewController.h */,
-				0D5B7C0319191D6E000FA3F6 /* SWEnemyViewController.h */,
-				0D5B7C0419191D6E000FA3F6 /* SWEnemyViewController.m */,
 				9EDA52BD190E1ED400212715 /* EnemyViewController.m */,
 				0D5B7BFD1918F2B1000FA3F6 /* EnemyView.xib */,
-				0D5B7C0619191E3F000FA3F6 /* EnemyFrontViewController.h */,
-				0D5B7C0719191E3F000FA3F6 /* EnemyFrontViewController.m */,
+				0D5B7C0B1919D0C3000FA3F6 /* FrontViewController.h */,
+				0D5B7C0C1919D0C3000FA3F6 /* FrontViewController.m */,
+				0D5B7C1B1919D703000FA3F6 /* FrontViewController.xib */,
+				0D5B7C0E1919D0D0000FA3F6 /* RearViewController.h */,
+				0D5B7C0F1919D0D0000FA3F6 /* RearViewController.m */,
+				0D5B7C101919D0D0000FA3F6 /* RearViewController.xib */,
+				0D5B7C131919D0DE000FA3F6 /* RightViewController.h */,
+				0D5B7C141919D0DE000FA3F6 /* RightViewController.m */,
+				0D5B7C151919D0DE000FA3F6 /* RightViewController.xib */,
 			);
 			name = Enemy;
 			sourceTree = "<group>";
@@ -436,16 +450,19 @@
 				9EDE5E2B191212AF002A3D93 /* UserViewController.xib in Resources */,
 				9EDE5E2F191218D9002A3D93 /* warrior.jpg in Resources */,
 				0DDB3306190D62230079F5AE /* InfoPlist.strings in Resources */,
+				0D5B7C121919D0D0000FA3F6 /* RearViewController.xib in Resources */,
 				9EDA52B6190E1E0800212715 /* tabBarUserIcon.png in Resources */,
 				9EDA52B8190E1E0800212715 /* tabBarWorldIcon.png in Resources */,
 				9EDE5E2119111176002A3D93 /* QuestViewController.xib in Resources */,
 				9EDE5E2E191218D9002A3D93 /* sorceress.jpg in Resources */,
 				9EDE5E36191229A2002A3D93 /* EditUserViewController.xib in Resources */,
 				9EDA52B9190E1E0800212715 /* tabBarMapIcon.png in Resources */,
+				0D5B7C1C1919D703000FA3F6 /* FrontViewController.xib in Resources */,
 				0DDB330E190D62230079F5AE /* Images.xcassets in Resources */,
 				0D5B7BFE1918F2B1000FA3F6 /* EnemyView.xib in Resources */,
 				9EDE5E2919116E20002A3D93 /* QuestSetupViewController.xib in Resources */,
 				9EDA52B5190E1E0800212715 /* tabBarEnemiesIcon.png in Resources */,
+				0D5B7C171919D0DE000FA3F6 /* RightViewController.xib in Resources */,
 				9EDA52B7190E1E0800212715 /* tabBarInventoryIcon.png in Resources */,
 				9E0FBAE71910503B00865E37 /* TutorialChildViewController.xib in Resources */,
 			);
@@ -504,17 +521,18 @@
 				9EDE5E35191229A2002A3D93 /* EditUserViewController.m in Sources */,
 				0D32C69B1917312500F1B0FF /* Calculator.m in Sources */,
 				0D32C6951916F6E200F1B0FF /* PersistencyManager.m in Sources */,
-				0D5B7C0819191E3F000FA3F6 /* EnemyFrontViewController.m in Sources */,
+				0D5B7C161919D0DE000FA3F6 /* RightViewController.m in Sources */,
 				0DDB330C190D62230079F5AE /* AppDelegate.m in Sources */,
 				9EDA52CC190E291A00212715 /* UserViewController.m in Sources */,
 				9EDA52C4190E286200212715 /* User.m in Sources */,
 				9E0FBAE61910503B00865E37 /* TutorialChildViewController.m in Sources */,
-				0D5B7C0519191D6E000FA3F6 /* SWEnemyViewController.m in Sources */,
 				9EDE5E2019111176002A3D93 /* QuestViewController.m in Sources */,
 				9E0FBAE21910502D00865E37 /* TutorialViewController.m in Sources */,
 				9EDA52C1190E1F9900212715 /* MapViewController.m in Sources */,
+				0D5B7C0D1919D0C3000FA3F6 /* FrontViewController.m in Sources */,
 				9EDA52D5190EC93E00212715 /* WorldViewController.m in Sources */,
 				0D32C6981916F6F700F1B0FF /* HTTPClient.m in Sources */,
+				0D5B7C111919D0D0000FA3F6 /* RearViewController.m in Sources */,
 				0DDB3308190D62230079F5AE /* main.m in Sources */,
 				9EDA52D2190EC76A00212715 /* InventoryTableViewController.m in Sources */,
 				0D32C6921916F67500F1B0FF /* SwordAPI.m in Sources */,

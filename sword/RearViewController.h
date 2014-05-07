@@ -1,5 +1,5 @@
 //
-//  EnemyFrontViewController.h
+//  RearViewController.h
 //  sword
 //
 //  Created by Verdi Ergun on 5/6/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EnemyFrontViewController : UIViewController
+@interface RearViewController : UIViewController
 
 @end

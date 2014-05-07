@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 
+@class SWRevealViewController;
+
 @interface QuestViewController : UIViewController
+@property (strong, nonatomic) SWRevealViewController *viewController;
 @end
