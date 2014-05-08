@@ -44,6 +44,7 @@
 		9E42AE7F191A8CA5006F42B0 /* actionMagic.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE7A191A8CA5006F42B0 /* actionMagic.png */; };
 		9E42AE80191A8CA5006F42B0 /* actionRun.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE7B191A8CA5006F42B0 /* actionRun.png */; };
 		9E42AE82191A8CE3006F42B0 /* tabBarMapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE81191A8CE3006F42B0 /* tabBarMapIcon.png */; };
+		9E42AE85191B48A0006F42B0 /* RearViewDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42AE84191B48A0006F42B0 /* RearViewDetailTableViewController.m */; };
 		9EDA52B5190E1E0800212715 /* tabBarEnemiesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B0190E1E0800212715 /* tabBarEnemiesIcon.png */; };
 		9EDA52B6190E1E0800212715 /* tabBarUserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B1190E1E0800212715 /* tabBarUserIcon.png */; };
 		9EDA52B7190E1E0800212715 /* tabBarInventoryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B2190E1E0800212715 /* tabBarInventoryIcon.png */; };
@@ -129,6 +130,8 @@
 		9E42AE7A191A8CA5006F42B0 /* actionMagic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionMagic.png; sourceTree = "<group>"; };
 		9E42AE7B191A8CA5006F42B0 /* actionRun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionRun.png; sourceTree = "<group>"; };
 		9E42AE81191A8CE3006F42B0 /* tabBarMapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarMapIcon.png; sourceTree = "<group>"; };
+		9E42AE83191B48A0006F42B0 /* RearViewDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearViewDetailTableViewController.h; sourceTree = "<group>"; };
+		9E42AE84191B48A0006F42B0 /* RearViewDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearViewDetailTableViewController.m; sourceTree = "<group>"; };
 		9EDA52B0190E1E0800212715 /* tabBarEnemiesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarEnemiesIcon.png; sourceTree = "<group>"; };
 		9EDA52B1190E1E0800212715 /* tabBarUserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarUserIcon.png; sourceTree = "<group>"; };
 		9EDA52B2190E1E0800212715 /* tabBarInventoryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarInventoryIcon.png; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				0D5B7C131919D0DE000FA3F6 /* RightViewController.h */,
 				0D5B7C141919D0DE000FA3F6 /* RightViewController.m */,
 				0D5B7C151919D0DE000FA3F6 /* RightViewController.xib */,
+				9E42AE83191B48A0006F42B0 /* RearViewDetailTableViewController.h */,
+				9E42AE84191B48A0006F42B0 /* RearViewDetailTableViewController.m */,
 			);
 			name = Enemy;
 			sourceTree = "<group>";
@@ -553,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EDA52C9190E28AB00212715 /* Monster.m in Sources */,
+				9E42AE85191B48A0006F42B0 /* RearViewDetailTableViewController.m in Sources */,
 				9EDE5E2819116E20002A3D93 /* QuestSetupViewController.m in Sources */,
 				9EDE5E35191229A2002A3D93 /* EditUserViewController.m in Sources */,
 				0D32C69B1917312500F1B0FF /* Calculator.m in Sources */,

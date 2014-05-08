@@ -10,4 +10,7 @@
 
 @interface FrontViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *FightButton;
+@property (weak, nonatomic) IBOutlet UILabel *monsterLabel;
+
 @end

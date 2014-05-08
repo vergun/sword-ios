@@ -100,8 +100,6 @@
     InventoryTableViewController *inventoryTableViewController = [[InventoryTableViewController alloc] init];
     WorldViewController *worldVC = [[WorldViewController alloc] init];
     
-    
-    
     //SWView Test
     FrontViewController *frontViewController = [FrontViewController new];
     RearViewTableViewController *rearViewTableViewController = [[RearViewTableViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -113,29 +111,34 @@
     
     revealController.delegate = self;
     revealController.rightViewController = rightViewController;
-//    self.viewController = revealController;
-    [self presentViewController:revealController animated:NO completion:nil];
+//     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"revealIcon.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
+//    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"chatIcon.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
+//    self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
+//    revealController.navigationItem.leftBarButtonItem = revealButtonItem;
     
-    //NavigationControllers
-//    UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:revealController];
-//    UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
-//    UINavigationController *userNavController = [[UINavigationController alloc] initWithRootViewController:userVC];
-//    UINavigationController *inventoryNavController = [[UINavigationController alloc] initWithRootViewController:inventoryTableViewController];
-//    UINavigationController *worldNavController = [[UINavigationController alloc] initWithRootViewController:worldVC];
+//    NavigationControllers
+    UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:revealController];
+    UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
+    UINavigationController *userNavController = [[UINavigationController alloc] initWithRootViewController:userVC];
+    UINavigationController *inventoryNavController = [[UINavigationController alloc] initWithRootViewController:inventoryTableViewController];
+    UINavigationController *worldNavController = [[UINavigationController alloc] initWithRootViewController:worldVC];
     
     //TabBarController
-//    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-//    NSArray *viewControllers = [NSArray arrayWithObjects: enemyNavController, mapNavController, userNavController, inventoryNavController, worldNavController, nil];
-//    [tabBarController setViewControllers:viewControllers];
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    enemyNavController.tabBarItem.image = [UIImage imageNamed:@"tabBarEnemiesIcon"];
+    NSArray *viewControllers = [NSArray arrayWithObjects: enemyNavController, mapNavController, userNavController, inventoryNavController, worldNavController, nil];
+    [tabBarController setViewControllers:viewControllers];
     
     //DisplayView
-    //    return YES;
-    //    tabBarController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    //    [self presentViewController:tabBarController animated:YES completion:nil];
-    //    [self presentViewController:revealController animated:YES completion:nil];
-
-    
+    tabBarController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:tabBarController animated:YES completion:nil];
+//    return YES;
 }
-                                    
+
+
+- (void) dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:nil];
+}
 
 @end

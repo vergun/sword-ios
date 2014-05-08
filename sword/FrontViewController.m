@@ -8,6 +8,8 @@
 
 #import "FrontViewController.h"
 #import "SWRevealViewController.h"
+#import "RearViewDetailTableViewController.h"
+#import "SwordAPI.h"
 
 @interface FrontViewController ()
 
@@ -27,24 +29,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.title = NSLocalizedString(@"Front View", nil);
-    
     SWRevealViewController *revealController = [self revealViewController];
-    
+    revealController.title = @"Enemy";
     [revealController panGestureRecognizer];
     [revealController tapGestureRecognizer];
-    //Add an image to your project & set that image here.
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"revealIcon.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
-    self.navigationItem.leftBarButtonItem = revealButtonItem;
-    
-    //Add an image to your project & set that image here.
+    revealController.navigationItem.leftBarButtonItem = revealButtonItem;
     UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"chatIcon.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
-    self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
+    revealController.navigationItem.rightBarButtonItem = rightRevealButtonItem;
     
     // Listen for click event
-    [[NSNotificationCenter defaultCenter] addObserver:revealController selector:@selector(revealToggle:) name:@"didClickActionItem" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didClickActionItem) name:@"didClickActionItem" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:revealController selector:@selector(revealToggle:) name:@"didClickActionGo" object:nil];
     
+}
+
+- (void) didClickActionItem {
+    RearViewDetailTableViewController *detailTableViewController = [[RearViewDetailTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:detailTableViewController  animated:YES];
+    NSLog(@"Got here!");
+}
+
+
+- (IBAction)didPressFightButton:(id)sender {
+    Monster *monster = [[SwordAPI sharedInstance] getRandomMonster];
+    self.monsterLabel.text = [monster name];
+    [self.view setNeedsDisplay];
 }
 
 - (void) dealloc

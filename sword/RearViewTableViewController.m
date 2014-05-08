@@ -8,6 +8,7 @@
 
 #import "RearViewTableViewController.h"
 #import "SWRevealViewController.h"
+#import "RearViewDetailTableViewController.h"
 
 @interface RearViewTableViewController () <SWRevealViewControllerDelegate>
 
@@ -45,7 +46,7 @@
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 //    return [self.cells count];
-    return 5;
+    return 6;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,7 +57,14 @@
 
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"didClickActionItem" object:nil];
+    if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4)
+    {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"didClickActionItem" object:nil];
+        
+    }
+    if (indexPath.row == 5) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"didClickActionGo" object:nil];
+    }
 
 }
 
@@ -94,6 +102,9 @@
             cell.textLabel.text = @"Try to run";
             cell.backgroundColor = [UIColor colorWithRed:.5 green:.5 blue:.3 alpha:1.0f];
             imv.image=[UIImage imageNamed:@"actionRun"];
+            break;
+        case 5:
+            cell.textLabel.text = @"Go";
             break;
     }
     [cell.contentView addSubview:imv];
