@@ -14,7 +14,7 @@
 		0D5B7BFE1918F2B1000FA3F6 /* EnemyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5B7BFD1918F2B1000FA3F6 /* EnemyView.xib */; };
 		0D5B7C011918F600000FA3F6 /* PersistencyManager+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C001918F600000FA3F6 /* PersistencyManager+Utility.m */; };
 		0D5B7C0D1919D0C3000FA3F6 /* FrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C0C1919D0C3000FA3F6 /* FrontViewController.m */; };
-		0D5B7C111919D0D0000FA3F6 /* RearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C0F1919D0D0000FA3F6 /* RearViewController.m */; };
+		0D5B7C111919D0D0000FA3F6 /* RearViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C0F1919D0D0000FA3F6 /* RearViewTableViewController.m */; };
 		0D5B7C121919D0D0000FA3F6 /* RearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5B7C101919D0D0000FA3F6 /* RearViewController.xib */; };
 		0D5B7C161919D0DE000FA3F6 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B7C141919D0DE000FA3F6 /* RightViewController.m */; };
 		0D5B7C171919D0DE000FA3F6 /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5B7C151919D0DE000FA3F6 /* RightViewController.xib */; };
@@ -35,11 +35,20 @@
 		9E0FBAE21910502D00865E37 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0FBAE11910502D00865E37 /* TutorialViewController.m */; };
 		9E0FBAE61910503B00865E37 /* TutorialChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0FBAE41910503B00865E37 /* TutorialChildViewController.m */; };
 		9E0FBAE71910503B00865E37 /* TutorialChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0FBAE51910503B00865E37 /* TutorialChildViewController.xib */; };
+		9E42AE72191A7693006F42B0 /* revealIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE71191A7693006F42B0 /* revealIcon.png */; };
+		9E42AE75191A776B006F42B0 /* chatIconActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE73191A776B006F42B0 /* chatIconActive.png */; };
+		9E42AE76191A776B006F42B0 /* chatIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE74191A776B006F42B0 /* chatIcon.png */; };
+		9E42AE7C191A8CA5006F42B0 /* actionAttack.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE77191A8CA5006F42B0 /* actionAttack.png */; };
+		9E42AE7D191A8CA5006F42B0 /* actionDefend.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE78191A8CA5006F42B0 /* actionDefend.png */; };
+		9E42AE7E191A8CA5006F42B0 /* actionInventory.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE79191A8CA5006F42B0 /* actionInventory.png */; };
+		9E42AE7F191A8CA5006F42B0 /* actionMagic.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE7A191A8CA5006F42B0 /* actionMagic.png */; };
+		9E42AE80191A8CA5006F42B0 /* actionRun.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE7B191A8CA5006F42B0 /* actionRun.png */; };
+		9E42AE82191A8CE3006F42B0 /* tabBarMapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E42AE81191A8CE3006F42B0 /* tabBarMapIcon.png */; };
 		9EDA52B5190E1E0800212715 /* tabBarEnemiesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B0190E1E0800212715 /* tabBarEnemiesIcon.png */; };
 		9EDA52B6190E1E0800212715 /* tabBarUserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B1190E1E0800212715 /* tabBarUserIcon.png */; };
 		9EDA52B7190E1E0800212715 /* tabBarInventoryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B2190E1E0800212715 /* tabBarInventoryIcon.png */; };
 		9EDA52B8190E1E0800212715 /* tabBarWorldIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B3190E1E0800212715 /* tabBarWorldIcon.png */; };
-		9EDA52B9190E1E0800212715 /* tabBarMapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B4190E1E0800212715 /* tabBarMapIcon.png */; };
+		9EDA52B9190E1E0800212715 /* tabBarMapIcon-deprectated.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA52B4190E1E0800212715 /* tabBarMapIcon-deprectated.png */; };
 		9EDA52BE190E1ED400212715 /* EnemyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52BD190E1ED400212715 /* EnemyViewController.m */; };
 		9EDA52C1190E1F9900212715 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52C0190E1F9900212715 /* MapViewController.m */; };
 		9EDA52C4190E286200212715 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA52C3190E286200212715 /* User.m */; };
@@ -82,8 +91,8 @@
 		0D5B7C001918F600000FA3F6 /* PersistencyManager+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PersistencyManager+Utility.m"; sourceTree = "<group>"; };
 		0D5B7C0B1919D0C3000FA3F6 /* FrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontViewController.h; sourceTree = "<group>"; };
 		0D5B7C0C1919D0C3000FA3F6 /* FrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontViewController.m; sourceTree = "<group>"; };
-		0D5B7C0E1919D0D0000FA3F6 /* RearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearViewController.h; sourceTree = "<group>"; };
-		0D5B7C0F1919D0D0000FA3F6 /* RearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearViewController.m; sourceTree = "<group>"; };
+		0D5B7C0E1919D0D0000FA3F6 /* RearViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearViewTableViewController.h; sourceTree = "<group>"; };
+		0D5B7C0F1919D0D0000FA3F6 /* RearViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearViewTableViewController.m; sourceTree = "<group>"; };
 		0D5B7C101919D0D0000FA3F6 /* RearViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RearViewController.xib; sourceTree = "<group>"; };
 		0D5B7C131919D0DE000FA3F6 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		0D5B7C141919D0DE000FA3F6 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
@@ -111,11 +120,20 @@
 		9E0FBAE31910503B00865E37 /* TutorialChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialChildViewController.h; sourceTree = "<group>"; };
 		9E0FBAE41910503B00865E37 /* TutorialChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialChildViewController.m; sourceTree = "<group>"; };
 		9E0FBAE51910503B00865E37 /* TutorialChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialChildViewController.xib; sourceTree = "<group>"; };
+		9E42AE71191A7693006F42B0 /* revealIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revealIcon.png; sourceTree = "<group>"; };
+		9E42AE73191A776B006F42B0 /* chatIconActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatIconActive.png; sourceTree = "<group>"; };
+		9E42AE74191A776B006F42B0 /* chatIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatIcon.png; sourceTree = "<group>"; };
+		9E42AE77191A8CA5006F42B0 /* actionAttack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionAttack.png; sourceTree = "<group>"; };
+		9E42AE78191A8CA5006F42B0 /* actionDefend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionDefend.png; sourceTree = "<group>"; };
+		9E42AE79191A8CA5006F42B0 /* actionInventory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionInventory.png; sourceTree = "<group>"; };
+		9E42AE7A191A8CA5006F42B0 /* actionMagic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionMagic.png; sourceTree = "<group>"; };
+		9E42AE7B191A8CA5006F42B0 /* actionRun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionRun.png; sourceTree = "<group>"; };
+		9E42AE81191A8CE3006F42B0 /* tabBarMapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarMapIcon.png; sourceTree = "<group>"; };
 		9EDA52B0190E1E0800212715 /* tabBarEnemiesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarEnemiesIcon.png; sourceTree = "<group>"; };
 		9EDA52B1190E1E0800212715 /* tabBarUserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarUserIcon.png; sourceTree = "<group>"; };
 		9EDA52B2190E1E0800212715 /* tabBarInventoryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarInventoryIcon.png; sourceTree = "<group>"; };
 		9EDA52B3190E1E0800212715 /* tabBarWorldIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarWorldIcon.png; sourceTree = "<group>"; };
-		9EDA52B4190E1E0800212715 /* tabBarMapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarMapIcon.png; sourceTree = "<group>"; };
+		9EDA52B4190E1E0800212715 /* tabBarMapIcon-deprectated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarMapIcon-deprectated.png"; sourceTree = "<group>"; };
 		9EDA52BC190E1ED400212715 /* EnemyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyViewController.h; path = ../EnemyViewController.h; sourceTree = "<group>"; };
 		9EDA52BD190E1ED400212715 /* EnemyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyViewController.m; path = ../EnemyViewController.m; sourceTree = "<group>"; };
 		9EDA52BF190E1F9900212715 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -196,8 +214,8 @@
 				0D5B7C0B1919D0C3000FA3F6 /* FrontViewController.h */,
 				0D5B7C0C1919D0C3000FA3F6 /* FrontViewController.m */,
 				0D5B7C1B1919D703000FA3F6 /* FrontViewController.xib */,
-				0D5B7C0E1919D0D0000FA3F6 /* RearViewController.h */,
-				0D5B7C0F1919D0D0000FA3F6 /* RearViewController.m */,
+				0D5B7C0E1919D0D0000FA3F6 /* RearViewTableViewController.h */,
+				0D5B7C0F1919D0D0000FA3F6 /* RearViewTableViewController.m */,
 				0D5B7C101919D0D0000FA3F6 /* RearViewController.xib */,
 				0D5B7C131919D0DE000FA3F6 /* RightViewController.h */,
 				0D5B7C141919D0DE000FA3F6 /* RightViewController.m */,
@@ -285,13 +303,22 @@
 		9EDA52BB190E1E2100212715 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9E42AE81191A8CE3006F42B0 /* tabBarMapIcon.png */,
+				9E42AE77191A8CA5006F42B0 /* actionAttack.png */,
+				9E42AE78191A8CA5006F42B0 /* actionDefend.png */,
+				9E42AE79191A8CA5006F42B0 /* actionInventory.png */,
+				9E42AE7A191A8CA5006F42B0 /* actionMagic.png */,
+				9E42AE7B191A8CA5006F42B0 /* actionRun.png */,
+				9E42AE73191A776B006F42B0 /* chatIconActive.png */,
+				9E42AE74191A776B006F42B0 /* chatIcon.png */,
+				9E42AE71191A7693006F42B0 /* revealIcon.png */,
 				9EDE5E2C191218D9002A3D93 /* sorceress.jpg */,
 				9EDE5E2D191218D9002A3D93 /* warrior.jpg */,
 				9EDA52B0190E1E0800212715 /* tabBarEnemiesIcon.png */,
 				9EDA52B1190E1E0800212715 /* tabBarUserIcon.png */,
 				9EDA52B2190E1E0800212715 /* tabBarInventoryIcon.png */,
 				9EDA52B3190E1E0800212715 /* tabBarWorldIcon.png */,
-				9EDA52B4190E1E0800212715 /* tabBarMapIcon.png */,
+				9EDA52B4190E1E0800212715 /* tabBarMapIcon-deprectated.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -450,17 +477,26 @@
 				9EDE5E2B191212AF002A3D93 /* UserViewController.xib in Resources */,
 				9EDE5E2F191218D9002A3D93 /* warrior.jpg in Resources */,
 				0DDB3306190D62230079F5AE /* InfoPlist.strings in Resources */,
+				9E42AE72191A7693006F42B0 /* revealIcon.png in Resources */,
 				0D5B7C121919D0D0000FA3F6 /* RearViewController.xib in Resources */,
 				9EDA52B6190E1E0800212715 /* tabBarUserIcon.png in Resources */,
 				9EDA52B8190E1E0800212715 /* tabBarWorldIcon.png in Resources */,
+				9E42AE80191A8CA5006F42B0 /* actionRun.png in Resources */,
 				9EDE5E2119111176002A3D93 /* QuestViewController.xib in Resources */,
 				9EDE5E2E191218D9002A3D93 /* sorceress.jpg in Resources */,
 				9EDE5E36191229A2002A3D93 /* EditUserViewController.xib in Resources */,
-				9EDA52B9190E1E0800212715 /* tabBarMapIcon.png in Resources */,
+				9EDA52B9190E1E0800212715 /* tabBarMapIcon-deprectated.png in Resources */,
 				0D5B7C1C1919D703000FA3F6 /* FrontViewController.xib in Resources */,
 				0DDB330E190D62230079F5AE /* Images.xcassets in Resources */,
+				9E42AE82191A8CE3006F42B0 /* tabBarMapIcon.png in Resources */,
+				9E42AE7C191A8CA5006F42B0 /* actionAttack.png in Resources */,
 				0D5B7BFE1918F2B1000FA3F6 /* EnemyView.xib in Resources */,
+				9E42AE75191A776B006F42B0 /* chatIconActive.png in Resources */,
+				9E42AE7E191A8CA5006F42B0 /* actionInventory.png in Resources */,
+				9E42AE7F191A8CA5006F42B0 /* actionMagic.png in Resources */,
+				9E42AE76191A776B006F42B0 /* chatIcon.png in Resources */,
 				9EDE5E2919116E20002A3D93 /* QuestSetupViewController.xib in Resources */,
+				9E42AE7D191A8CA5006F42B0 /* actionDefend.png in Resources */,
 				9EDA52B5190E1E0800212715 /* tabBarEnemiesIcon.png in Resources */,
 				0D5B7C171919D0DE000FA3F6 /* RightViewController.xib in Resources */,
 				9EDA52B7190E1E0800212715 /* tabBarInventoryIcon.png in Resources */,
@@ -532,7 +568,7 @@
 				0D5B7C0D1919D0C3000FA3F6 /* FrontViewController.m in Sources */,
 				9EDA52D5190EC93E00212715 /* WorldViewController.m in Sources */,
 				0D32C6981916F6F700F1B0FF /* HTTPClient.m in Sources */,
-				0D5B7C111919D0D0000FA3F6 /* RearViewController.m in Sources */,
+				0D5B7C111919D0D0000FA3F6 /* RearViewTableViewController.m in Sources */,
 				0DDB3308190D62230079F5AE /* main.m in Sources */,
 				9EDA52D2190EC76A00212715 /* InventoryTableViewController.m in Sources */,
 				0D32C6921916F67500F1B0FF /* SwordAPI.m in Sources */,

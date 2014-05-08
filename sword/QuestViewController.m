@@ -17,7 +17,7 @@
 #import "SWRevealViewController.h"
 #import "FrontViewController.h"
 #import "RightViewController.h"
-#import "RearViewController.h"
+#import "RearViewTableViewController.h"
 
 @interface QuestViewController () <SWRevealViewControllerDelegate>
 {
@@ -104,10 +104,10 @@
     
     //SWView Test
     FrontViewController *frontViewController = [FrontViewController new];
-    RearViewController *rearViewController = [RearViewController new];
+    RearViewTableViewController *rearViewTableViewController = [[RearViewTableViewController alloc] initWithStyle:UITableViewStylePlain];
     RightViewController *rightViewController = [RightViewController new];
     UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
-    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
+    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewTableViewController];
     
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
     

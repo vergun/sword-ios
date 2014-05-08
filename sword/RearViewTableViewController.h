@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RearViewController : UIViewController
-
+@interface RearViewTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 @end
