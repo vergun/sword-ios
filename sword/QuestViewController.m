@@ -94,7 +94,6 @@
 - (void) normalPath
 {
     //ViewControllers
-//    EnemyViewController* enemyVC = [EnemyViewController new];
     MapViewController* mapVC = [[MapViewController alloc] init];
     UserViewController *userVC = [[UserViewController alloc] init];
     InventoryTableViewController *inventoryTableViewController = [[InventoryTableViewController alloc] init];
@@ -111,11 +110,7 @@
     
     revealController.delegate = self;
     revealController.rightViewController = rightViewController;
-//     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"revealIcon.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
-//    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"chatIcon.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
-//    self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
-//    revealController.navigationItem.leftBarButtonItem = revealButtonItem;
-    
+
 //    NavigationControllers
     UINavigationController *enemyNavController = [[UINavigationController alloc] initWithRootViewController:revealController];
     UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];

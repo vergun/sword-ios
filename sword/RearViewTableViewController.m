@@ -15,7 +15,6 @@
 @end
 
 
-
 @implementation RearViewTableViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -34,7 +33,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Listen for click event
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didClickActionItem) name:@"didClickActionItem" object:nil];
+    // addNotification to pop to root view controller
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didWantToPopToRootViewControllerAfterDelay) name:@"didWantToPopToRootViewControllerAfterDelay" object:nil];
 }
+
+- (void) didWantToPopToRootViewController
+{
+    
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
+
+
+- (void) didWantToPopToRootViewControllerAfterDelay
+{
+    // TODO: Change to animate back first, then slide over
+    [NSTimer scheduledTimerWithTimeInterval:.08 target:self selector:@selector(didWantToPopToRootViewController) userInfo:nil repeats:NO];
+}
+
+- (void) didClickActionItem {
+    RearViewDetailTableViewController *detailTableViewController = [[RearViewDetailTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:detailTableViewController  animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -63,6 +86,7 @@
         
     }
     if (indexPath.row == 5) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"didClickActionGo" object:nil];
     }
 

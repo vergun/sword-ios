@@ -24,6 +24,7 @@
     if ([allUsers[0] enabled] == NO && [allUsers[1] enabled] == NO && [allUsers[2] enabled] == NO) [self tutorialPath];
     else [self chooseQuestPath];
     
+    
     return YES;
 }
 
