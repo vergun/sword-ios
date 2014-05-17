@@ -23,5 +23,6 @@
 - (void)deleteUserAtIndex:(int) index;
 - (NSArray*)getMonsters;
 - (Monster *)getRandomMonster;
-
+- (NSArray *) getActionMenu;
+- (NSDictionary *) getActionMenuSubMenu;
 @end

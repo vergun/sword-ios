@@ -143,5 +143,27 @@
     return randomMonster;
 }
 
+- (NSArray *) getActionMenu
+{
+    NSArray *array = @[@"Attack", @"Defend", @"Magic", @"Inventory", @"Try to run", @"Go"];
+    
+    return array;
+}
+
+- (NSDictionary *) getActionMenuSubMenu
+{
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+        [NSArray arrayWithObjects:nil], @"Attack",
+        [NSArray arrayWithObjects:nil], @"Defend",
+        @[@"Heal", @"Fireball"], @"Magic",
+        @[@"Health potion", @"Magic potion"], @"Inventory",
+        [NSArray arrayWithObjects:nil], @"Try to run",
+        [NSArray arrayWithObjects:nil], @"Go",
+
+        nil];
+    
+    return dictionary;
+}
+
 @end
 

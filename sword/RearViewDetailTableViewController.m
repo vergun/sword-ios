@@ -48,7 +48,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    // todo replace with array length + 1
+    return 5;
 }
 
 
@@ -59,9 +60,22 @@
     int num = indexPath.row;
     UITableViewCell *cell = [UITableViewCell new];
     
+    NSArray *actionMenu = [[SwordAPI sharedInstance ] getActionMenu];
+    NSDictionary *actionMenuSubMenu = [[SwordAPI sharedInstance] getActionMenuSubMenu];
+    NSString *cellText = @"";
+    NSString *key = [actionMenu objectAtIndex:num];
+    
+    
+    for (NSString* key in actionMenu) {
+        NSArray *subMenu = [actionMenuSubMenu objectForKey:key];
+        NSString *objectAtIndex = [subMenu objectAtIndex:num];
+        cell.textLabel.text = objectAtIndex;
+    }
     
     if (num == 0) {
-        cell.textLabel.text = @"Back";
+        cell.textLabel.text = @"Back"; }
+    else if (num > 0) {
+        cell.textLabel.text = cellText;
     }
     
     return cell;

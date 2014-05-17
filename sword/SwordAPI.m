@@ -102,5 +102,15 @@
     return [persistencyManager getRandomMonster];
 }
 
+- (NSArray *) getActionMenu
+{
+    return [persistencyManager getActionMenu];
+}
+
+- (NSDictionary *)getActionMenuSubMenu
+{
+    return [persistencyManager getActionMenuSubMenu];
+}
+
 
 @end

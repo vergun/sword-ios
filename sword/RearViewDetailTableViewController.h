@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SwordAPI.h"
 
 @interface RearViewDetailTableViewController : UITableViewController
+
+@property NSNumber *tappedParentRowIndex;
 
 @end

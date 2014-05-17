@@ -21,4 +21,7 @@
 - (void)saveUsers;
 - (NSArray*)getMonsters;
 - (Monster*)getRandomMonster;
+- (NSArray *)getActionMenu;
+- (NSDictionary *)getActionMenuSubMenu;
+
 @end

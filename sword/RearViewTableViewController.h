@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SwordAPI.h"
 
 @interface RearViewTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 @end
